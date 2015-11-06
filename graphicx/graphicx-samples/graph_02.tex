@@ -1,0 +1,21 @@
+% !TEX TS-program = XeLaTeX 
+% Commands for running this example:
+% xelatex graph_02
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\newcommand\HR{\rule{1em}{0.4pt}}
+\newcommand\bluefbox[1]{\textcolor{blue}{\setlength\fboxsep{0pt}%
+                                      \fbox{\textcolor{black}{#1}}}}
+\usepackage{graphicx,color}
+\usepackage{xepersian}
+\begin{document}
+راست\HR\bluefbox{%
+  \includegraphics[angle=-60,%
+                   height=15mm]%
+     {w.eps}}\HR
+\bluefbox{%
+  \includegraphics[angle=-60,%
+                   totalheight=15mm]%
+     {w.eps}}\HR چپ
+\end{document}

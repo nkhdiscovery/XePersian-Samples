@@ -1,0 +1,25 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex multi_row_test
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{multirow}
+\usepackage{xepersian}
+
+\title{کشیدن جدول در بستهٔ \lr{longtable}}
+\author{وفا خلیقی}
+
+
+
+\begin{document}
+\begin{tabular}{|l|l|l|l|}   \hline
+\multirow{4}{14mm}{متن در ستون ۱}
+    & C2a & \multirow{4}{14mm}{متن در ستون ۳}
+                & C4a      \\
+    & C2b &     & C4b      \\
+    & C2c &     & C4c      \\
+    & C2d &     & C4d      \\\hline
+\end{tabular}
+
+\end{document}

@@ -1,0 +1,19 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex test9
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage[extrafootnotefeatures]{xepersian}
+
+\RTLcolumnfootnotes
+\ninecolumnfootnotes
+\begin{document}
+\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}
+
+\bigskip
+\begin{minipage}{\textwidth}
+\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}%
+\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}\footnote{Test}
+\end{minipage}
+\end{document}

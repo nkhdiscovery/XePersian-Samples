@@ -1,0 +1,14 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex example3-boxed-equation
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{xcolor}
+\usepackage{xepersian}
+\begin{document}
+{ \setlength\fboxsep{10pt}%
+  \fcolorbox{cyan}{yellow}{$f(x)=\prod_{i=1}^{n}\left(i-\frac{1}{2i} \right)$} } و
+{ \setlength\fboxrule{1.5pt}%
+  \fcolorbox{cyan}{gray}{$f(x)=\prod_{i=1}^{n}\left(i-\frac{1}{2i} \right)$} }
+\end{document}

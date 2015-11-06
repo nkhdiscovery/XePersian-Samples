@@ -1,0 +1,91 @@
+%%
+%% This is file `sidebarbidipres.sty',
+%% 
+%%   __________________________________
+%%   Copyright © 2010 AR Hashemi
+%% 
+%%   
+%% 
+%% 
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{sidebarbidipres}%
+[2010/07/21 Style with sidebar for using with bidipresentation class]
+\usepackage[RL]{flowfram}
+\usepackage{eso-pic}
+%\usepackage{wallpaper}
+\usepackage{graphicx}
+%\usepackage{watermark}
+\geometry{paperwidth=225mm,paperheight=180mm,rmargin=40mm,top=10mm,bottom=10mm}
+
+%%رنگ ها
+\def\linktc#1#2{\definecolor{link-text}{#1}{#2}}
+\def\sidebartc#1#2{\definecolor{sidebar-text}{#1}{#2}}
+\def\rtopbarc#1#2{\definecolor{topbar1-color}{#1}{#2}}
+\def\ltopbarc#1#2{\definecolor{topbar2-color}{#1}{#2}}
+\def\ltopbartc#1#2{\definecolor{topbar2-text}{#1}{#2}}
+\def\rbotbarc#1#2{\definecolor{botbar1-color}{#1}{#2}}
+\def\lbotbarc#1#2{\definecolor{botbar2-color}{#1}{#2}}
+\def\lbotbartc#1#2{\definecolor{botbar2-text}{#1}{#2}}
+
+
+\usepackage[colorlinks,linkcolor=link-text,setpagesize=false]{hyperref}%
+
+%\makeatletter
+%\renewcommand{\rotateframe}[2]{\if@ttb@rotate
+%\rotatebox{#1}{\if@RTL\beginL\fi#2\if@RTL\endL\fi}%
+%\else
+%#2\relax
+%\fi}
+%\makeatother
+
+
+
+\renewcommand{\sectionmark}[1]{\markright{#1}{}} %%استخراج عنوان خالص سكشن
+
+%%نوار بالا
+%\vtwotonetop{1cm}{0.6\paperwidth}{[cmyk]{0.65,0.13,0,0}}{topleft}%
+%{0.4\paperwidth}{[cmyk]{0.94,0.54,0,0}}{topright}
+\newstaticframe[2,>1]{66mm}{1.3cm}{123mm}{159mm}[topbar1]
+\setstaticframe*{topbar1}{backcolor=topbar1-color}
+\newdynamicframe[2,>1]{128mm}{1.3cm}{-5mm}{159mm}[topbar2]
+\setdynamicframe*{topbar2}{valign=c,textcolor=topbar2-text,backcolor=topbar2-color}
+%%محتویات نواربالا
+\begin{dynamiccontents*}{topbar2}
+\bfseries{\rightmark}
+\end{dynamiccontents*}
+
+%%نوار پایین
+\newstaticframe[2,>1]{99mm}{9mm}{90mm}{-10mm}[botbar1]
+\setstaticframe*{botbar1}{backcolor=botbar1-color}
+\newdynamicframe[2,>1]{95mm}{9mm}{-5mm}{-10mm}[botbar2]
+\setdynamicframe*{botbar2}{valign=c,textcolor=botbar2-text,backcolor=botbar2-color}
+%%محتویات نوارپایین
+\begin{dynamiccontents*}{botbar2}
+	\begin{flushleft}
+		\footnotesize{\thepage
+	}
+	\end{flushleft}
+\end{dynamiccontents*}
+
+%%عكس زمینه سایدبار
+\AddToShipoutPicture{%
+\put(33,512){
+\reflectbox{
+\includegraphics[keepaspectratio=false,height=-\paperheight ,width=31mm]{side.jpg}
+}
+}%
+}
+%%خودسایدبار
+\newstaticframe{30mm}{\paperheight}{190mm}{-10mm}[sidebar]
+\setstaticframe*{sidebar}{valign=b}%{backcolor=[cmyk]{0.15,0.15,0,0}}
+
+
+
+
+
+%% 
+%% Copyright © 2010      by AR Hashemi     <Nekoomehr@gmail.com>
+%% 
+%% 
+%%
+%% End of file `sidebarbidipres.sty'.

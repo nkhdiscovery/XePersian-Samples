@@ -1,0 +1,20 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex text_format_2
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{titlesec}
+\newcommand\secformat[1]{%
+  \parbox[b]{.5\textwidth}{\filleft\bfseries #1}%
+  \quad\rule[-12pt]{2pt}{70pt}\quad
+  {\fontsize{60}{60}\selectfont\thesection}}
+\titleformat{\section}[block]
+  {\filright\normalfont}{}{0pt}{\secformat}
+\titlespacing*{\section}{0pt}{*3}{*2}[1pc]
+\usepackage{xepersian}
+
+\begin{document}
+\section{یک عنوان\\ در دو خط}
+این یک متن نمونه است این یک متن نمونه است این یک متن نمونه است این یک متن نمونه است این یک متن نمونه است این یک متن نمونه است این یک متن نمونه است این یک متن نمونه است
+\end{document}

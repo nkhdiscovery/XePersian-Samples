@@ -1,0 +1,215 @@
+\documentclass[11pt,oneside]{bidipresentation}
+%\pagestyle{pres}
+
+
+
+
+%\usepackage[pagebackref=false]{hyperref}
+
+\usepackage{tikz}\usetikzlibrary{shapes,snakes}
+\usepackage{pstricks}
+%\hypersetup{pdfborder={0 0 0}, colorlinks = false}
+%\usepackage{eso-pic}
+
+\usepackage{sidebarbidipres}
+\usepackage{xepersian}
+
+
+
+\linespread{2}
+\pagestyle{pres}
+
+%%رنگ​ها
+\sidebartc{cmyk}{0,0,0,1}
+\linktc{cmyk}{0,0,0,0}
+\rtopbarc{cmyk}{0.94,0.54,0,0}
+\ltopbarc{cmyk}{0.15,0.15,0,0}
+\ltopbartc{cmyk}{0,0,0,1}
+\rbotbarc{cmyk}{0.15,0.15,0,0}
+\lbotbarc{cmyk}{0.94,0.54,0,0}
+\lbotbartc{cmyk}{0,0,0,0}
+
+
+
+
+%\settextfont{DejaVu Sans}
+
+\settextfont[Scale=1.37]{XB Niloofar}%{Nazanin 2}
+\setlatintextfont[Scale=1.0]{Times New Roman}%{XB Zar}
+%\setdigitfont[Scale=1.2]{PGaramond}%{Nazanin 2}
+\defpersianfont\titr[Scale=1.1]{XB Zar}%{Titr Farsi}
+\defpersianfont\zar[Scale=1]{XB Zar}
+\defpersianfont\naz[Scale=1.37]{XB Zar}%{XB Niloofar}
+\defpersianfont\nazb[Scale=1.37]{XB Zar}%{XB Niloofar}
+\deflatinfont\times[Scale=1.1]{Times New Roman}
+
+%%%%%%%%%%%%%%%%%% هادی صفی اقدم%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% #1 عنوان کادر
+%#2 متن اسلاید
+%#3 عکس پس زمینه اسلاید به صورت مثلا gra.png
+\tikzstyle{mybox} = [draw=blue!30, fill=none, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
+\tikzstyle{fancytitle} =[fill=lightgray, text=blue]
+%%%%%%%%%
+ \newcommand{\myslide}[3]{\begin{plainslide}
+\begin{tikzpicture}\node [mybox] (box){\setRTL\begin{minipage}{0.95\textwidth}
+{#2}
+  \end{minipage}};\node[fancytitle, left=10pt] at (box.north east) {\hboxR{{ \Large{#1}}}};\end{tikzpicture} 
+ \AddToShipoutPicture*{\put(-512,0){\includegraphics[height=\paperheight, width=194mm]{#3}}}    \end{plainslide}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% محیط قضیه
+%1 متن اسلاید
+\tikzstyle{myghazye} = [draw=red!80, fill=none, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
+\tikzstyle{fancytitleghazye} =[fill=yellow!20, text=red]
+%%%%%%%
+ \newcommand{\myghazye}[1]{
+\begin{tikzpicture}\node [myghazye] (box){\setRTL\begin{minipage}{0.95\textwidth}
+{#1}
+  \end{minipage}};\node[fancytitleghazye, left=10pt] at (box.north east) {\hboxR{{\Large{قضیه }}}};\end{tikzpicture} 
+ \AddToShipoutPicture*{\put(-512,0){\includegraphics[height=\paperheight, width=194mm]{gra4.jpg}}} 
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% محیط تعریف
+\tikzstyle{mytarif} = [draw=green, fill=none, very thick, rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
+\tikzstyle{fancytitletarif} =[fill=green!20, text=green]
+%%%%%%%
+ \newcommand{\mytarif}[1]{
+\begin{tikzpicture}\node [mytarif] (box){\setRTL\begin{minipage}{0.95\textwidth}
+{#1}
+  \end{minipage}};\node[fancytitletarif, left=10pt] at (box.north east) {\hboxR{{\Large{تعریف }}}};\end{tikzpicture} 
+ \AddToShipoutPicture*{\put(-512,0){\includegraphics[height=\paperheight, width=194mm]{gra4.jpg}}} 
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% محیط مثال
+\tikzstyle{mymesal} = [draw=blue, fill=none, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
+\tikzstyle{fancytitlemesal} =[fill=blue!20, text=blue]
+%%%%%%%%%
+ \newcommand{\mymesal}[1]{
+\begin{tikzpicture}\node [mymesal] (box){\setRTL\begin{minipage}{0.95\textwidth}
+{#1}
+  \end{minipage}};\node[fancytitlemesal, left=10pt] at (box.north east) {\hboxR{{\Large{مثال }}}};\end{tikzpicture} 
+ \AddToShipoutPicture*{\put(-512,0){\includegraphics[height=\paperheight, width=194mm]{gra4.jpg}}}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%% هادی صفی اقدم%%%%%%%%%%%
+
+
+\title{عنوان اسلاید}
+\author{اسم خودم}
+
+
+\begin{document}
+
+%%محتویات سایدبار
+\begin{staticcontents*}{sidebar}
+	\hspace{3mm}\includegraphics[width=2cm]{logo.png}%
+	\begin{center}
+		\color{sidebar-text}
+		\begin{footnotesize}
+		\bfseries\makeatletter\@title\makeatother
+		\vskip 5mm
+		\rm\makeatletter\@author\makeatother
+		\end{footnotesize}
+	\end{center}	
+	\begin{center}
+		\begin{small}
+		\vskip 4cm
+%		\makeatletter\@starttoc{sdb}\makeatother
+		\hyperref[sec:Intro]{مقدمه}
+		\\
+		\hyperref[sec:section2]{قسمت دوم}
+		\vskip 4cm
+	\hyperref[sec:Conc]{نتیجه گیری}
+		\vspace{1.5cm}
+		\end{small}		
+	\end{center}
+\end{staticcontents*}
+
+
+\begin{titlepage}
+\begin{center}
+\begin{Large}
+\vspace{5cm}
+بِسمِ اللّٰهِ الرَّحمٰنِ الرَّحیمِ
+\end{Large}
+\end{center}
+\end{titlepage}
+
+\begin{plainslide}
+\AddToShipoutPicture*{%
+\put(-512,0){{\includegraphics[keepaspectratio=false,height=\paperheight ,width=194mm]{side.jpg}}}%\reflectbox 512
+}
+%\AddToShipoutPicture*{%
+%\put(120,0){\includegraphics[angle=180,keepaspectratio=false,height=\paperheight ,width=130mm]{side2.jpg}}%
+%}
+\distance{1}
+\centering% \LARGE
+\color{white}{\huge\titr{\makeatletter\@title\makeatother}}
+
+\distance{2}
+\color{black}\rm\large
+\makeatletter\@author\makeatother\\[1ex]نام دانشگاه
+\distance{2}
+%	\tableofcontents
+\end{plainslide}
+\section{مقدمه} \label{sec:Intro}
+\begin{plainslide}[این عنوان یک صفحه است.]
+این اولین صفحه اسلاید ما است که من در حال نوشتن آن هستم و کمی بیشتر می‌نویسم تا به خط بعدی بروم
+\footnote{این یک زیرنویس فارسی است.}\LTRfootnote{This is an English footnote.}
+
+\end{plainslide}
+\begin{plainslide}
+\begin{equation}
+(a+b)^2=a^2+2ab+b^2
+\end{equation}
+\begin{itemize}
+  \item یک
+  \item دو
+\end{itemize}
+
+\begin{enumerate}
+  \item یک
+  \item دو
+\end{enumerate}
+
+\begin{description}
+  \item [یک:] اولین عدد
+  \item [دو:] دومین عدد
+\end{description}
+
+\end{plainslide}
+\section{قسمت دوم} \label{sec:section2}
+\begin{rawslide}
+دومین صفحه
+
+\end{rawslide}
+
+\section{نتیجه گیری} \label{sec:Conc}
+\begin{rawslide}
+صفحه آخِر
+
+\end{rawslide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{plainslide}
+ %%%%%%%%%%%%%%%%%%%%%%%%%
+\myghazye{متن قضیه را می‌نویسم}
+\vspace*{5mm}
+ %%%%%%%%%%%%%%%%%%%%%%%%%
+\mytarif{متن قضیه را می‌نویسم}
+\vspace*{5mm}
+ %%%%%%%%%%%%%%%%%%%%%%%%%
+\mymesal{متن مثال را می‌نویسم}
+\end{plainslide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\myslide{عنوان اسلاید جدید با پس‌زمینه جداگانه من}{ 
+متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من متن اسلاید جدید من 
+} {gra1.png}
+\end{document}
+

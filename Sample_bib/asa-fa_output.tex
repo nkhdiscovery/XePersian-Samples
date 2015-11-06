@@ -1,0 +1,38 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex asa-fa_output
+%      bibtex8 -W -c cp1256fa asa-fa_output
+% 	 xelatex asa-fa_output
+% 	 xelatex asa-fa_output
+% End of Commands
+\documentclass[11pt,a4paper]{article}
+% برای چگونگی اجرا راهنمای بسته‌ی Persian-bib را ملاحظه فرمایید.
+% در تک‌میکر اصلاح شده، به ترتیب: F1 سپس F11 و بعد دوبار F1.
+% استفاده از بسته‌ی زیر الزامی نیست ولی با استفاده از آن می‌توانید لینکهای رنگی به مراجع خود داشته باشید. 
+\usepackage[colorlinks,citecolor=blue]{hyperref}
+\usepackage[nonamebreak,square]{natbib}
+
+\usepackage{xepersian}
+
+
+\title{نمونه خروجی با استیل فارسی \lr{asa-fa} برای \lr{BibTeX} در زی‌پرشین}
+\author{محمود امین‌طوسی}\date{}
+\begin{document}
+\maketitle
+
+مرجع \cite{Omidali82phdThesis} یک نمونه پروژه دکترا و مرجع \cite{Vahedi87} یک نمونه مقاله مجله فارسی است.
+مرجع \citep{Amintoosi87afzayesh}  یک نمونه  مقاله کنفرانس فارسی و
+مرجع \cite{Pedram80osool} یک نمونه کتاب فارسی با ذکر مترجمان و ویراستاران فارسی است. مرجع \cite{Khalighi07MscThesis} یک نمونه پروژه کارشناسی ارشد انگلیسی و
+\cite{Khalighi87xepersian} هم یک نمونه متفرقه  می‌باشند.
+
+مرجع \cite{Gonzalez02book} یک نمونه کتاب لاتین است که از آنجا که دارای فیلد \lr{authorfa} است، نام نویسندگان آن در استیلهای \lr{asa-fa}، \lr{plainnat-fa} و \lr{chicago-fa} به فارسی دیده می‌شود. مرجع \Latincite{Baker02limits} مقاله انگلیسی است که معادل فارسی نام نویسندگان آن ذکر نشده بوده است و البته با استفاده از \lr{Latincite} به آن ارجاع داده شده است.
+
+
+{\small
+% در اینجا می‌توانید سبک‌های مختلف را گذاشته و تفاوت خروجی را ببینید
+\bibliographystyle{asa-fa}
+
+\bibliography{MyReferences}
+}
+
+\end{document}

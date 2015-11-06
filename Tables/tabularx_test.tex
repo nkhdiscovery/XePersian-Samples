@@ -1,0 +1,30 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex tabularx_test
+% End of Commands
+% وفا خلیقی
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{tabularx}
+\usepackage{xepersian}
+
+\begin{document}
+
+\begin{latin}
+\begin{tabularx}{\linewidth}{|l|p{1.25cm}|p{1.5cm}|X|}\hline
+\multicolumn{1}{|c|}{\textbf{Animal}}
+  & \textbf{Hair Colour}
+  & \multicolumn{2}{c|}{\textbf{Favourite foods}} \\\hline\hline
+Elephant & Gray & Peanuts
+  & Unshelled, prepared in Sea Salt, and warmed over hot stone grill \\\cline{3-4}
+  &  & Cabbage and Greens
+  & Sun dried until lightly browned (2-3 days minimum); 
+    seasoned with Hyperchem super feed \\\cline{4-4}
+  & & & Boiled to British standard \\\hline\hline
+Lion & Yellow & Elephants & Tartare \\\cline{4-4}
+& & & Must be served warm, with no trace of 
+  buckshot. Gaiminess considered desireable. \\\hline
+\end{tabularx} 
+\end{latin}
+
+\end{document}

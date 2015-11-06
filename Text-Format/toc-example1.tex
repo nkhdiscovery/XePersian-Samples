@@ -1,0 +1,36 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex toc-example1
+% 	 xelatex toc-example1
+% End of Commands
+\documentclass{report}
+\pagestyle{empty}
+\usepackage{eco,titletoc}
+\usepackage{xepersian}
+
+\contentsmargin{0pt}
+\titlecontents{chapter}[1.5pc]
+  {\addvspace{2pc}\large}
+  {\contentslabel{2pc}%
+   }
+  {}
+  {\hfill\thecontentspage}
+  [\vspace{2pt}]
+\titlecontents*{section}[1.5pc]
+  {\small}{\S\thecontentslabel\ }{}
+  {,~\thecontentspage}[. ][.]
+\setcounter{tocdepth}{1}
+\begin{document}
+\tableofcontents
+\chapter{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\chapter{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\contentsfinish
+\end{document}

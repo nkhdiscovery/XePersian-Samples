@@ -1,0 +1,23 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex table-example2
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{xepersian}
+
+\begin{document}
+\begin{tabular}{ccccc}
+الف1 & الف1 & الف1 & الف1 & الف1\\\hline
+الف2 & \begin{tabular}{|c|}\hline
+       آ1\\آ1\\آ1\\\hline
+     \end{tabular}
+        & \begin{tabular}{c}آ2\\آ2\\آ2\\\end{tabular}
+             & الف & \begin{tabular}{|c|}\hline
+                     آ3\\آ3\\آ4\\\hline
+                   \end{tabular}\\
+الف3 & الف3 & الف3 & الف3 & الف3\\\cline{3-4}
+الف4 & الف4 & \multicolumn{2}{|c|}{الف4*} & الف4\\\cline{3-4}
+الف5 & الف5 & الف5 & الف5 & الف5\\
+\end{tabular}
+\end{document}

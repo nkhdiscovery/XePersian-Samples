@@ -1,0 +1,39 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex definition-example
+% End of Commands
+\documentclass[10pt,a4paper]{book}
+\pagestyle{empty}
+\usepackage{framed}
+\usepackage{color}
+\usepackage[thmmarks,framed]{ntheorem}
+\usepackage{xepersian}
+
+\theoremstyle{plain}
+\theorembodyfont{\small}
+
+\renewcommand\FrameCommand{{\color{magenta}\vrule width 5pt \hspace{10pt}}}
+\theoremstyle{theorem}
+\newtheorem{theorem}{قضیه}[section]
+\newframedtheorem{defn}[theorem]{تعریف}
+
+
+\begin{document}
+\chapter{فصل اول}
+\section{بخش اول}
+
+\begin{defn}
+این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است این محیط defn  است
+\end{defn}
+سلام 
+
+\begin{defn}
+این هم محیط defn  است
+\end{defn}
+\begin{theorem}
+این هم محیط theorem  است
+\end{theorem}
+\begin{defn}
+این هم محیط defn  است
+\end{defn}
+\end{document}

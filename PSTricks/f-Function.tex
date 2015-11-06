@@ -1,0 +1,22 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex f-Function
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{pstricks-add}
+\usepackage{xepersian}
+
+\begin{document}
+\psset{unit=1.25cm}
+\begin{pspicture}[plotpoints=200](-0.5,-3)(10,2.5)
+  \psStep[algebraic,fillstyle=solid,fillcolor=yellow]
+         (0.001,9.5){40}{2*sqrt(x)*cos(ln(x))*sin(x)}
+  \psStep[algebraic,StepType=Riemann,fillstyle=solid,fillcolor=blue]
+         (0.001,9.5){40}{2*sqrt(x)*cos(ln(x))*sin(x)}
+  \psaxes{->}(0,0)(0,-2.75)(10,2.5)
+  \psplot[algebraic,linecolor=white,labelFontSize=\footnotesize]
+         {0.001}{9.75}{2*sqrt(x)*cos(ln(x))*sin(x)}
+  \uput[90](6,1.2){$f(x)=2\cdot\sqrt{x}\cdot\cos{(\ln{x})}\cdot\sin{x}$}
+\end{pspicture}
+\end{document}

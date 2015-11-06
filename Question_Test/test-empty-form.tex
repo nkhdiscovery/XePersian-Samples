@@ -1,0 +1,46 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex test-empty-form
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{xepersian-multiplechoice}
+\usepackage{xepersian}
+
+\begin{document}
+\begin{question}{اگر $A=\{ 1,2\} $ و $B=\{ 2,3\} $ آنگاه حاصل $B^2-A\times B$ کدام است.}
+\false $\{(3,2),(3,3)\} $
+\true $\{(2,2),(2,3)\} $
+\false $\{(2,3),(3,3)\} $
+\false $\{(2,2),(3,2)\} $
+\end{question}
+
+\begin{question}{اگر $A=\{ 1,2\} $ و $B=\{ 2,3\} $ آنگاه حاصل $B^2-A\times B$ کدام است.}
+\true $x$
+\false $y$
+\false $z$
+\false $t$
+\end{question}
+
+\begin{question}{مجموعه $(B-A^{'})^{'}$ برابر است با:}
+\false $B^{'}\bigcap A$
+\false $B'\bigcup A' $
+\true $A$
+\false هیچکدام.
+\end{question}
+
+\begin{question}{صورت متعارفی عدد مختلط $\frac{7+i}{1-i}$ کدام است.}
+\false $4+4i$
+\false $4-3i$
+\false $3+4i$
+\true $3-3i$
+\end{question}
+\begin{correction}
+جواب درست یکی از اینها است.
+\end{correction}
+\bigskip
+
+\begin{center}
+\makeform
+\end{center}
+\end{document}

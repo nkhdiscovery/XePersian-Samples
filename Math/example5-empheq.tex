@@ -1,0 +1,15 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex example5-empheq
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{empheq,graphicx}
+\usepackage{xepersian}
+\begin{document}
+این یک متن است
+\begin{empheq}[right=\kern1em\empheqrbrace\quad\Leftarrow\text{عمل تفریق}]{align}
+  3x_1 + 4x_2 -3x_3 &= 4\\   3x_1 - 4x_2 - x_3 &= 1
+\end{empheq}
+این یک متن است
+\end{document}

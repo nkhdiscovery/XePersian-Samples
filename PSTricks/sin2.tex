@@ -1,0 +1,24 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex sin2
+% End of Commands
+\documentclass[a4paper,landscape]{article}
+\pagestyle{empty}
+\usepackage{pstricks-add}
+\parindent=0cm
+\usepackage{xepersian}
+
+\begin{document}
+\psset{arrowscale=2,unit=1.25cm}
+  \begin{pspicture}(0,-1.5)(3.14,1.5)
+    \psaxes[xunit=1.570796327,showorigin=false,ticks=all,tickcolor=red,linecolor=red,trigLabels=true]{->}(0,0)(-2,-1.5)(3.14,1.5)
+    \psplot[plotstyle=line,linewidth=1pt,linecolor=green]{-3.14}{3.14}{x 180 mul 3.14 div sin}
+    \psplot[plotstyle=line,linewidth=1pt,linecolor=blue]{-3.14}{3.14}{x 180 mul 3.14 div cos}
+    \psline[linecolor=red]{-}(0.7,0)(0.7,0.7)
+%    \pcline[linestyle=dashed,linewidth=0.2pt](A)(0.7,0.7)
+    \uput[-90](0.70,0){$arc(\alpha)$}
+    \uput[-90](5,0){x}
+    \uput[180](0,1.4){y}
+  \end{pspicture}
+\end{document}
+

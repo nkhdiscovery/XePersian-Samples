@@ -1,0 +1,52 @@
+;; This logfile was generated automatically by `xindy'
+;; at 09.02.2014  20:13:00
+;; Indexstyle: "IZs2iXuRwi", Rawindex: "EXT0LPhQ1q", Output: "Xindy_Make_Glossaries.gls"
+
+
+Building indexentry-tree:
+Hierdepth of index is :TREE
+
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+
+Forming letter-groups:
+Letter-group: "€œƒœ" -> "Ø§"
+Letter-group: "”‹" -> "Ø´"
+Letter-group: "›ŽŸ—Ÿ" -> "Ù…"
+Letter-group: "ŒŸ‚‹Ÿœ" -> "Ø²"
+Letter-group: "€žœ€›ž" -> "Ùˆ"
+Letter-group: "‹€Ÿ€œž" -> "Ø±"
+Letter-group: "›€" -> "Ø´"
+Letter-group: "˜š€–" -> "Ú©"
+Letter-group: "‚‹‰€Œ™‹" -> "Ù¾"
+Letter-group: "†œ‹ž" -> "Ú†"
+Letter-group: "™‹ž" -> "Ú¯"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "€œƒœ" -> "Ø§"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "‚‹‰€Œ™‹" -> "Ù¾"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "†œ‹ž" -> "Ú†"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "‹€Ÿ€œž" -> "Ø±"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "ŒŸ‚‹Ÿœ" -> "Ø²"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "”‹" -> "Ø´"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "˜š€–" -> "Ú©"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "™‹ž" -> "Ú¯"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "›ŽŸ—Ÿ" -> "Ù…"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "€žœ€›ž" -> "Ùˆ"

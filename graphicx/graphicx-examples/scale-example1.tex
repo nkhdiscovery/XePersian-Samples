@@ -1,0 +1,16 @@
+% !TEX TS-program = XeLaTeX 
+% Commands for running this example:
+% xelatex scale-example1
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{graphicx}
+\usepackage{xepersian}
+\begin{document}
+\noindent ایران؟\scalebox{-1}{ایران؟}   \\
+          ایران؟\scalebox{1}[-1]{ایران؟}\\
+          ایران؟\makebox[0mm][l]{%
+                    \scalebox{-1}{ایران؟}}\\
+          \makebox[0mm][r]{ایران؟}%
+                   \scalebox{1}[-1]{ایران؟}
+\end{document}

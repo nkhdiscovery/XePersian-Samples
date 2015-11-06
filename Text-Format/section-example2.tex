@@ -1,0 +1,21 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex section-example2
+% End of Commands
+% To get desired results the version of your bidi package should be at least 1.2.8
+\documentclass{article}
+\pagestyle{empty}
+\usepackage[noindentafter,calcwidth]{titlesec}
+\titleformat{\section}[display]
+  {\filleft\normalfont\bfseries}
+  {\titleline[l]{\Huge\bfseries قسمت \thesection}}{1ex}
+  {\titleline*[r]{\titlerule[1pt]}\vspace{1pt}%
+   \titleline*[r]{\titlerule[2pt]}\vspace{2pt}}
+  [{\titleline*[r]{\titlerule*{\tiny زی‌پرشین}}}]
+\titlespacing{\section}{0pc}{*3}{*2}
+\usepackage{xepersian}
+
+\begin{document}
+\section{یک قسمت نمونه برای آزمایش}
+این یک متن نمونه است که در حال نوشتنش هستیم  این یک متن نمونه است که در حال نوشتنش هستیم این یک متن نمونه است که در حال نوشتنش هستیم این یک متن نمونه است که در حال نوشتنش هستیم این یک متن نمونه است که در حال نوشتنش هستیم این یک متن نمونه است که در حال نوشتنش هستیم این یک متن نمونه است که در حال نوشتنش هستیم
+\end{document}

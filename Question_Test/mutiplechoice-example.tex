@@ -1,0 +1,234 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex mutiplechoice-example
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{multicol,color}
+\definecolor{mycolor}{rgb}{0,.43,0}
+\newcounter{question}
+\newenvironment{mcquestions}{\begin{itemize}}{\end{itemize}}
+\newcommand{\question}[1]{\stepcounter{question}\item[\textcolor{mycolor}{\thequestion.}] #1}
+\newsavebox{\answera}
+\newsavebox{\answerb}
+\newsavebox{\answerc}
+\newsavebox{\answerd}
+\newcommand{\answer}[4]{%
+\sbox\answera{#1}%
+\sbox\answerb{#2}%
+\sbox\answerc{#3}%
+\sbox\answerd{#4}%
+\ifdim\wd\answera<0.165\textwidth%
+\ifdim\wd\answerb<0.165\textwidth%
+\ifdim\wd\answerc<0.165\textwidth%
+\ifdim\wd\answerd<0.165\textwidth%
+\begin{multicols}{4}
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] \usebox{\answera}
+\item[\textcolor{mycolor}{2)}] \usebox{\answerb}
+\item[\textcolor{mycolor}{3)}] \usebox{\answerc}
+\item[\textcolor{mycolor}{4)}] \usebox{\answerd}
+\end{itemize}
+\end{multicols}
+\else%
+\ifdim\wd\answera<0.4\textwidth%
+\ifdim\wd\answerb<0.4\textwidth%
+\ifdim\wd\answerc<0.4\textwidth%
+\ifdim\wd\answerd<0.4\textwidth%
+\begin{multicols}{2}
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] \usebox{\answera}
+\item[\textcolor{mycolor}{3)}] \usebox{\answerc}
+\item[\textcolor{mycolor}{2)}] \usebox{\answerb}
+\item[\textcolor{mycolor}{4)}] \usebox{\answerd}
+\end{itemize}
+\end{multicols}
+\else
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] #1
+\item[\textcolor{mycolor}{2)}] #2
+\item[\textcolor{mycolor}{3)}] #3
+\item[\textcolor{mycolor}{4)}] #4
+\end{itemize}
+\fi
+\else
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] #1
+\item[\textcolor{mycolor}{2)}] #2
+\item[\textcolor{mycolor}{3)}] #3
+\item[\textcolor{mycolor}{4)}] #4
+\end{itemize}
+\fi
+\else
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] #1
+\item[\textcolor{mycolor}{2)}] #2
+\item[\textcolor{mycolor}{3)}] #3
+\item[\textcolor{mycolor}{4)}] #4
+\end{itemize}
+\fi
+\else
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] #1
+\item[\textcolor{mycolor}{2)}] #2
+\item[\textcolor{mycolor}{3)}] #3
+\item[\textcolor{mycolor}{4)}] #4
+\end{itemize}
+\fi\fi
+\else
+\ifdim\wd\answera<0.4\textwidth%
+\ifdim\wd\answerb<0.4\textwidth%
+\ifdim\wd\answerc<0.4\textwidth%
+\ifdim\wd\answerd<0.4\textwidth%
+\begin{multicols}{2}
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] \usebox{\answera}
+\item[\textcolor{mycolor}{3)}] \usebox{\answerc}
+\item[\textcolor{mycolor}{2)}] \usebox{\answerb}
+\item[\textcolor{mycolor}{4)}] \usebox{\answerd}
+\end{itemize}
+\end{multicols}
+\else
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] #1
+\item[\textcolor{mycolor}{2)}] #2
+\item[\textcolor{mycolor}{3)}] #3
+\item[\textcolor{mycolor}{4)}] #4
+\end{itemize}
+\fi
+\else
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] #1
+\item[\textcolor{mycolor}{2)}] #2
+\item[\textcolor{mycolor}{3)}] #3
+\item[\textcolor{mycolor}{4)}] #4
+\end{itemize}
+\fi
+\else
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] #1
+\item[\textcolor{mycolor}{2)}] #2
+\item[\textcolor{mycolor}{3)}] #3
+\item[\textcolor{mycolor}{4)}] #4
+\end{itemize}
+\fi
+\else
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] #1
+\item[\textcolor{mycolor}{2)}] #2
+\item[\textcolor{mycolor}{3)}] #3
+\item[\textcolor{mycolor}{4)}] #4
+\end{itemize}
+\fi\fi
+\else
+\ifdim\wd\answera<0.4\textwidth%
+\ifdim\wd\answerb<0.4\textwidth%
+\ifdim\wd\answerc<0.4\textwidth%
+\ifdim\wd\answerd<0.4\textwidth%
+\begin{multicols}{2}
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] \usebox{\answera}
+\item[\textcolor{mycolor}{3)}] \usebox{\answerc}
+\item[\textcolor{mycolor}{2)}] \usebox{\answerb}
+\item[\textcolor{mycolor}{4)}] \usebox{\answerd}
+\end{itemize}
+\end{multicols}
+\else
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] #1
+\item[\textcolor{mycolor}{2)}] #2
+\item[\textcolor{mycolor}{3)}] #3
+\item[\textcolor{mycolor}{4)}] #4
+\end{itemize}
+\fi
+\else
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] #1
+\item[\textcolor{mycolor}{2)}] #2
+\item[\textcolor{mycolor}{3)}] #3
+\item[\textcolor{mycolor}{4)}] #4
+\end{itemize}
+\fi
+\else
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] #1
+\item[\textcolor{mycolor}{2)}] #2
+\item[\textcolor{mycolor}{3)}] #3
+\item[\textcolor{mycolor}{4)}] #4
+\end{itemize}
+\fi
+\else
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] #1
+\item[\textcolor{mycolor}{2)}] #2
+\item[\textcolor{mycolor}{3)}] #3
+\item[\textcolor{mycolor}{4)}] #4
+\end{itemize}
+\fi\fi
+\else
+\ifdim\wd\answera<0.4\textwidth%
+\ifdim\wd\answerb<0.4\textwidth%
+\ifdim\wd\answerc<0.4\textwidth%
+\ifdim\wd\answerd<0.4\textwidth%
+\begin{multicols}{2}
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] \usebox{\answera}
+\item[\textcolor{mycolor}{3)}] \usebox{\answerc}
+\item[\textcolor{mycolor}{2)}] \usebox{\answerb}
+\item[\textcolor{mycolor}{4)}] \usebox{\answerd}
+\end{itemize}
+\end{multicols}
+\else
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] #1
+\item[\textcolor{mycolor}{2)}] #2
+\item[\textcolor{mycolor}{3)}] #3
+\item[\textcolor{mycolor}{4)}] #4
+\end{itemize}
+\fi
+\else
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] #1
+\item[\textcolor{mycolor}{2)}] #2
+\item[\textcolor{mycolor}{3)}] #3
+\item[\textcolor{mycolor}{4)}] #4
+\end{itemize}
+\fi
+\else
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] #1
+\item[\textcolor{mycolor}{2)}] #2
+\item[\textcolor{mycolor}{3)}] #3
+\item[\textcolor{mycolor}{4)}] #4
+\end{itemize}
+\fi
+\else
+\begin{itemize}
+\item[\textcolor{mycolor}{1)}] #1
+\item[\textcolor{mycolor}{2)}] #2
+\item[\textcolor{mycolor}{3)}] #3
+\item[\textcolor{mycolor}{4)}] #4
+\end{itemize}
+\fi\fi
+}
+\usepackage{xepersian}
+
+\begin{document}
+\begin{mcquestions}
+\question{%
+کدامیک از عبارات زیر در مورد سیستم کنترل مدار بسته زیر صحیح نیست؟}
+\answer{%
+حساسیت $G$ نسبت به $K$ برابر با واحد است}
+{%
+حساسیت $G$ نسبت به $\infty$ برابر با $\frac{-\infty}{s+\infty}$ است}
+{%
+حساسیت $H$ نسبت به $\beta$ برابر با واحد است حساسیت $H$ نسبت به $\beta$ برابر با واحد است حساسیت $H$ نسبت به $\beta$ برابر با واحد است}
+{%
+حساسیت $T(s)$ نسبت به $\infty$ برابر با $\frac{-2s}{s^2+2s+10}$ است}
+\question{%
+حساسیت تابع تبدیل حلقه بسته کنترل شکل زیر نسبت به پارامتر $p$ کدام است؟ حساسیت تابع تبدیل حلقه بسته کنترل شکل زیر نسبت به پارامتر $p$ کدام است؟ حساسیت تابع تبدیل حلقه بسته کنترل شکل زیر نسبت به پارامتر $p$ کدام است؟}
+\answer{$\frac{-T}{s+k}$}{$\frac{-sT(s+k)}{1+(1+s)(s+k)}$}{$\frac{-sT(s+k)(s+1)}{e^{Ts}+(1+s)(s+k)}$}{هیچ‌کدام}
+\question{حاصل $2+3$ کدام است؟}
+\answer{$\pi$}{$2\pi$}{$-\pi$}{$5$}
+\end{mcquestions}
+\end{document}

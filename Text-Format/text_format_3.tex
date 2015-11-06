@@ -1,0 +1,34 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex text_format_3
+% 	 xelatex text_format_3
+% End of Commands
+\documentclass{report}
+\pagestyle{empty}
+\usepackage[dotinlabels]{titletoc}
+\usepackage{xepersian}
+
+\titlecontents{chapter} [4pc]
+   {\addvspace{1pc}\bfseries
+    \titlerule[2pt]\filright}
+   {\contentslabel
+      [\chaptername\
+       \thecontentslabel]{4pc}}
+   {}{\hfill\contentspage}
+   [\addvspace{2pt}]
+% Show only chapter/section entries:
+\setcounter{tocdepth}{1}
+\begin{document}
+\tableofcontents
+\chapter{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\chapter{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\contentsfinish
+\end{document}

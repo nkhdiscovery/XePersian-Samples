@@ -1,0 +1,49 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex threeparttable_test
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{threeparttable}
+\usepackage{xepersian}
+
+\title{کشیدن جدول در بستهٔ \lr{longtable}}
+\author{وفا خلیقی}
+
+
+\begin{document}
+
+\begin{threeparttable}
+\caption[\lr{Example of a \texttt{threeparttable}
+   environment}]{\textbf{\lr{PostScript Type 1 fonts}}}
+\begin{tabular}{@{}ll@{}}
+\lr{Courier\tnote{a}} & \lr{cour, courb, courbi, couri}  \\
+\lr{Charter\tnote{b}} & \lr{bchb, bchbi, bchr, bchri}    \\
+\lr{Nimbus\tnote{c}}  & \lr{unmr, unmrs}                 \\
+\lr{URW Antiqua\tnote{c}} & \lr{uaqrrc}                  \\
+\lr{URW Grotesk\tnote{c}} & \lr{ugqp}                    \\
+\lr{Utopia\tnote{d}}      & \lr{putb, putbi, putr, putri}\\
+\end{tabular}
+\begin{tablenotes}
+\item[\lr{a}]\lr{Donated by IBM.}
+\item[\lr{b}]\lr{Donated by Bitstream.}
+\item[\lr{c}]\lr{Donated by URW GmbH.}
+\item[\lr{d}]\lr{Donated by Adobe.}
+\end{tablenotes}
+
+\begin{tablenotes}[flushleft,online]
+\item[\lr{a}]\lr{Donated by IBM.}
+\item[\lr{b}]\lr{Donated by Bitstream.}
+\item[\lr{c}]\lr{Donated by URW GmbH.}
+\item[\lr{d}]\lr{Donated by Adobe.}
+\end{tablenotes}
+
+\begin{tablenotes}[para]
+\item[]اهدا شده بوسیله:
+\item[\lr{a}]\lr{IBM,} \item[\lr{b}]\lr{Bitstream,}
+\item[\lr{c}]\lr{URW GmbH,}
+\item[\lr{d}]\lr{Adobe.}
+\end{tablenotes}
+\end{threeparttable}
+
+\end{document}

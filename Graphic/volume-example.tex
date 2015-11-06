@@ -1,0 +1,56 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex volume-example
+% End of Commands
+\documentclass{article}
+\usepackage{bm}% boldmath
+\usepackage{pstricks}
+\usepackage{pst-node}
+\usepackage{pst-plot}
+\usepackage{pst-3dplot}
+\usepackage{pstricks-add}
+
+
+\makeatletter
+\def\psRotation#1(#2,#3)#4{%
+  \rput{#1}(#2,#3){%
+    \psellipticarc[linewidth=.4pt]{->}(0,-0.1)(0.6,0.15){120}{70}
+    \ifdim#1pt>\z@\rput[l]{*0}(0.675,0){#4}\else\rput[l](0.675,0){#4}\fi
+  }%
+}
+ \makeatother
+ \psset{xunit=3cm,yunit=3cm}
+\pagestyle{empty} 
+\parindent=0pt
+
+\usepackage{xepersian}
+\begin{document}
+
+\begin{pspicture}(-3,-.5)(2.,2)
+\pscustom[linewidth=1pt,fillstyle=solid,fillcolor=--olive!30]{ }
+\psellipse[fillstyle=solid,fillcolor=lightgray!20,linestyle=dashed](-1,.5)(145pt,25pt)
+ \psellipse[fillstyle=solid](-1,.5)(105pt,12pt)
+\psaxes [ticks=none]{->}(0,0)(-3,-.5)(1.5,1.5)
+ \psplot[linewidth=1pt,algebraic,linecolor=red]{0}{1.4}{x^(.5)}
+\psplot[linewidth=1pt,algebraic,linecolor=blue]{0}{1.2}{x^(2)}
+ \psline[linecolor=black,linestyle=dashed](-1,-.2)(-1,1.5)
+\psbrace[linecolor=blue,ref=Cr,rot=90](0,.8)(-1,.8){}
+\psbrace[linecolor=blue,ref=Cr,rot=90](-1,.8)(-2.2,.8){}
+\psbrace[linecolor=blue,ref=Cr,rot=90](-1,1.1)(-2.8,1.1){}
+\psbrace[linecolor=blue,ref=Cr](-1,.5)(-1,0){}
+\rput(-1.3,.25) { {$y$}}
+ \rput(1.1,.9) { $(1,1) $}
+ {\psset{xunit=1cm,yunit=1cm}\psRotation{180}(-3,4){}}
+ \rput(-1.5,1) { $r_{\textmd{\tiny ورودی}}=1+y^{2}$}
+  \rput(-.5,1) { $1$}
+ \rput(-2,1.4) { $r_{\textmd{\tiny خروجی}}=1+y^{1/3}$}
+ \rput(-1,-.3) { $x=-1$}
+ \psline[linewidth=.1cm,linecolor=yellow](-1,.5)(.7,.5)
+ \rput(.5,1) { $x=y^{2}$}
+\rput(1,.5) { $x=y^{1/3}$} \rput(-.1,1.2) { $y$} \rput(1.3,-.1) {$x$}
+\psdots[linecolor=black,dotscale=1, dotstyle=*](.25,.5)
+\psdots[linecolor=black,dotscale=1, dotstyle=*](.7,.5)
+\end{pspicture}
+
+\end{document}
+

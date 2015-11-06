@@ -1,0 +1,53 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex exercise-example
+% End of Commands
+\documentclass{book}
+\pagestyle{empty}
+\usepackage{manfnt,mathabx}
+\usepackage{xepersian}
+
+\makeatletter
+\def\d@nger{\medbreak\begingroup\clubpenalty=10000
+  \def\par{\endgraf\endgroup\medbreak} \noindent\hangindent -40pt\hangafter=-2
+  \hbox to0pt{\hskip\hangindent\dbend\hfill}}
+\outer\def\danger{\d@nger}
+\def\dd@nger{\medbreak\begingroup\clubpenalty=10000
+  \def\par{\endgraf\endgroup\medbreak} \noindent\hangindent -40pt\hangafter=-2
+  \hbox to0pt{\hskip\hangindent\dbend\kern1pt\dbend\hfill}}
+\outer\def\ddanger{\dd@nger}
+\def\enddanger{\endgraf\endgroup} % omits the \medbreak
+\def\endddanger{\endgraf\endgroup} % omits the \medbreak
+\newcounter{exno}
+\outer\def\exercise{\medbreak
+ \begingroup
+  \refstepcounter{exno}
+  \noindent\llap{$\blacktriangleleft$\kern.15em}% triangle in margin
+  {\bfseries تمرین\thechapter\@SepMark\theexno}\par\nobreak\noindent}
+\def\endexercise{\endgroup}
+\def\dexercise{\refstepcounter{exno}
+  \llap{$\blacktriangleleft$\kern.15em}% triangle in indented space
+  {\bfseries تمرین\thechapter\@SepMark\theexno}\hfil\break}
+\outer\def\dangerexercise{\d@nger \dexercise}
+\outer\def\ddangerexercise{\dd@nger \dexercise}
+\def\enddangerexercise{\endgraf\endgroup} % omits the \medbreak
+\def\endddangerexercise{\endgraf\endgroup} % omits the \medbreak
+\makeatother
+\begin{document}
+\chapter{فصل اول}
+\begin{danger}
+این یک نکته درسی است که فهمیدن آن کمی مشکل است این یک نکته درسی است که فهمیدن آن کمی مشکل است این یک نکته درسی است که فهمیدن آن کمی مشکل است این یک نکته درسی است که فهمیدن آن کمی مشکل است این یک نکته درسی است که فهمیدن آن کمی مشکل است این یک نکته درسی است که فهمیدن آن کمی مشکل است
+\end{danger}
+\begin{ddanger}
+این یک نکته درسی است که فهمش خیلی مشکل است این یک نکته درسی است که فهمش خیلی مشکل است این یک نکته درسی است که فهمش خیلی مشکل است این یک نکته درسی است که فهمش خیلی مشکل است این یک نکته درسی است که فهمش خیلی مشکل است این یک نکته درسی است که فهمش خیلی مشکل است
+\end{ddanger}
+\begin{exercise}
+این یک تمرین است این یک تمرین است این یک تمرین است این یک تمرین است این یک تمرین است این یک تمرین است این یک تمرین است این یک تمرین است این یک تمرین است این یک تمرین است این یک تمرین است
+\end{exercise}
+\begin{dangerexercise}
+این تمرین کمی مشکل است این تمرین کمی مشکل است این تمرین کمی مشکل است این تمرین کمی مشکل است این تمرین کمی مشکل است این تمرین کمی مشکل است این تمرین کمی مشکل است این تمرین کمی مشکل است این تمرین کمی مشکل است این تمرین کمی مشکل است این تمرین کمی مشکل است این تمرین کمی مشکل است این تمرین کمی مشکل است این تمرین کمی مشکل است این تمرین کمی مشکل است
+\end{dangerexercise}
+\begin{ddangerexercise}
+این تمرین خیلی مشکل است این تمرین خیلی مشکل است این تمرین خیلی مشکل است این تمرین خیلی مشکل است این تمرین خیلی مشکل است این تمرین خیلی مشکل است این تمرین خیلی مشکل است این تمرین خیلی مشکل است این تمرین خیلی مشکل است این تمرین خیلی مشکل است این تمرین خیلی مشکل است این تمرین خیلی مشکل است
+\end{ddangerexercise}
+\end{document}

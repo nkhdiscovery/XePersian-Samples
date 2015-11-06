@@ -1,0 +1,19 @@
+% !TEX TS-program = XeLaTeX 
+% Commands for running this example:
+% xelatex graph_05
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\newcommand\HR{\rule{1em}{0.4pt}}
+\newcommand\bluefbox[1]{\textcolor{blue}{\setlength\fboxsep{0pt}%
+                                      \fbox{\textcolor{black}{#1}}}}
+\usepackage{graphicx,color}
+\usepackage{xepersian}
+\begin{document}
+راست\HR \bluefbox{\includegraphics
+      [height=15mm,width=25mm]{w.eps}}%
+\HR وسط\HR
+ \bluefbox{\includegraphics[height=15mm,
+   width=25mm,keepaspectratio]{w.eps}}%
+\HR چپ
+\end{document}

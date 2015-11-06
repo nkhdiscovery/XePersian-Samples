@@ -1,0 +1,57 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\providecommand*\glsXpageXglsnumberformat[2]{\setentrycounter[#1]{page}\glsnumberformat{#2}}
+\providecommand*\glsXpageXtextrm[2]{\setentrycounter[#1]{page}\textrm{#2}}
+\providecommand*\glsXpageXtextsf[2]{\setentrycounter[#1]{page}\textsf{#2}}
+\providecommand*\glsXpageXtexttt[2]{\setentrycounter[#1]{page}\texttt{#2}}
+\providecommand*\glsXpageXtextbf[2]{\setentrycounter[#1]{page}\textbf{#2}}
+\providecommand*\glsXpageXtextmd[2]{\setentrycounter[#1]{page}\textmd{#2}}
+\providecommand*\glsXpageXtextit[2]{\setentrycounter[#1]{page}\textit{#2}}
+\providecommand*\glsXpageXtextup[2]{\setentrycounter[#1]{page}\textup{#2}}
+\providecommand*\glsXpageXtextsl[2]{\setentrycounter[#1]{page}\textsl{#2}}
+\providecommand*\glsXpageXtextsc[2]{\setentrycounter[#1]{page}\textsc{#2}}
+\providecommand*\glsXpageXemph[2]{\setentrycounter[#1]{page}\emph{#2}}
+\providecommand*\glsXpageXglshypernumber[2]{\setentrycounter[#1]{page}\glshypernumber{#2}}
+\providecommand*\glsXpageXhyperrm[2]{\setentrycounter[#1]{page}\hyperrm{#2}}
+\providecommand*\glsXpageXhypersf[2]{\setentrycounter[#1]{page}\hypersf{#2}}
+\providecommand*\glsXpageXhypertt[2]{\setentrycounter[#1]{page}\hypertt{#2}}
+\providecommand*\glsXpageXhyperbf[2]{\setentrycounter[#1]{page}\hyperbf{#2}}
+\providecommand*\glsXpageXhypermd[2]{\setentrycounter[#1]{page}\hypermd{#2}}
+\providecommand*\glsXpageXhyperit[2]{\setentrycounter[#1]{page}\hyperit{#2}}
+\providecommand*\glsXpageXhyperup[2]{\setentrycounter[#1]{page}\hyperup{#2}}
+\providecommand*\glsXpageXhypersl[2]{\setentrycounter[#1]{page}\hypersl{#2}}
+\providecommand*\glsXpageXhypersc[2]{\setentrycounter[#1]{page}\hypersc{#2}}
+\providecommand*\glsXpageXhyperemph[2]{\setentrycounter[#1]{page}\hyperemph{#2}}
+\begin{theglossary}\glossaryheader
+\glsgroupheading{ا}\relax\glsresetentrylist
+\glossaryentryfield{آنتن}{\glsnamefont{آنتن}}{\lr {Antenna}}{\relax }{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{1}}}\glsgroupskip
+\glsgroupheading{پ}\relax\glsresetentrylist
+\glossaryentryfield{پردازشگر}{\glsnamefont{پردازشگر}}{\lr {Processor}}{\relax }{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{1}}}\glsgroupskip
+\glsgroupheading{چ}\relax\glsresetentrylist
+\glossaryentryfield{چنبره}{\glsnamefont{چنبره}}{\lr {Torus}}{\relax }{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{1}}}\glsgroupskip
+\glsgroupheading{ر}\relax\glsresetentrylist
+\glossaryentryfield{رایانه}{\glsnamefont{رایانه}}{\lr {Computer}}{\relax }{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{1}}}\glsgroupskip
+\glsgroupheading{ز}\relax\glsresetentrylist
+\glossaryentryfield{زی‌پرشین}{\glsnamefont{زی‌پرشین}}{\lr {\XePersian }}{\relax }{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{1}}}\glsgroupskip
+\glsgroupheading{ش}\relax\glsresetentrylist
+\glossaryentryfield{شعر}{\glsnamefont{شعر}}{\lr {Poem}}{\relax }{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{1}}}\relax\glsresetentrylist
+\glossaryentryfield{شما}{\glsnamefont{شما}}{\lr {Scheme}}{\relax }{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{1}}}\glsgroupskip
+\glsgroupheading{ک}\relax\glsresetentrylist
+\glossaryentryfield{کلاف}{\glsnamefont{کلاف}}{\lr {Bundle}}{\relax }{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{1}}}\glsgroupskip
+\glsgroupheading{گ}\relax\glsresetentrylist
+\glossaryentryfield{گروه}{\glsnamefont{گروه}}{\lr {Group}}{\relax }{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{1}}}\glsgroupskip
+\glsgroupheading{م}\relax\glsresetentrylist
+\glossaryentryfield{موسیقی}{\glsnamefont{موسیقی}}{\lr {Music}}{\relax }{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{1}}}\glsgroupskip
+\glsgroupheading{و}\relax\glsresetentrylist
+\glossaryentryfield{واژه‌نامه}{\glsnamefont{واژه‌نامه}}{\lr {Glossary}}{\relax }{\glossaryentrynumbers{\relax 
+\glsXpageXglsnumberformat{}{1}}}%
+\end{theglossary}\glossarypostamble

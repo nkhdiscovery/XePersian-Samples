@@ -1,0 +1,27 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex booktab_test
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{booktabs}
+\usepackage{xepersian}
+
+\title{کشیدن جدول}
+\author{وفا خلیقی}
+
+\begin{document}
+\begin{latin}
+\begin{tabular}{@{}llr@{}}
+\toprule
+  \multicolumn{2}{c}{Item} &\multicolumn{1}{c}{Price/lb} \\
+\cmidrule(r){1-2}\cmidrule(l){3-3}
+  Food & Category & \multicolumn{1}{c}{\$}\\
+\midrule
+  Apples & Fruit  & 1.50  \\
+  Oranges & Fruit & 2.00  \\
+  Beef d & Meat   & 4.50  \\
+\bottomrule
+\end{tabular}
+\end{latin}
+\end{document}

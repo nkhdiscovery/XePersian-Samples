@@ -1,0 +1,198 @@
+% در این فایل، دستورها و تنظیمات مورد نیاز، آورده شده است.
+%-------------------------------------------------------------------------------------------------------------------
+
+\usepackage{stmaryrd}
+\usepackage{mathrsfs,amssymb,amsmath,latexsym,amsthm}
+%ایجاد فرورفتگی در اولین پاراگراف هر بخش
+\usepackage{indentfirst}
+% بسته‌ای برای تنطیم حاشیه‌های بالا، پایین، چپ و راست صفحه
+\usepackage[top=30mm, bottom=30mm, left=25mm, right=35mm]{geometry}
+% بسته‌‌ای برای ظاهر شدن شکل‌ها و تصاویر متن
+\usepackage{graphicx}
+% بسته‌ای برای رسم کادر
+\usepackage{framed} 
+% بسته‌‌ای برای چاپ شدن خودکار تعداد صفحات در صفحه «معرفی پایان‌نامه»
+\usepackage{lastpage}
+% بسته‌‌ای برای ایجاد دیاگرام‌های مختلف
+\usepackage[all]{xy}
+\usepackage{tikz}
+\usetikzlibrary{topaths}
+\tikzset{terminal/.style={
+							% The shape:
+							rectangle ,minimum size =6mm,rounded corners=4mm,
+							% The rest
+							%very thick,draw=black!50,
+							top color=green!10,bottom color=green!40,
+							font=\ttfamily}}
+% بسته‌ و دستوراتی برای ایجاد لینک‌های رنگی با امکان جهش
+\usepackage[linktocpage=true,colorlinks,pagebackref=true,linkcolor=blue,citecolor=magenta]{hyperref}
+% چنانچه قصد پرینت گرفتن نوشته خود را دارید، خط بالا را غیرفعال و  از دستور زیر استفاده کنید چون در صورت استفاده از دستور زیر‌‌، 
+% لینک‌ها به رنگ سیاه ظاهر خواهند شد که برای پرینت گرفتن، مناسب‌تر است
+%\usepackage[pagebackref=false]{hyperref}
+%بسته‌ی لازم برای مراجع
+\usepackage[nonamebreak,square]{natbib}
+% بسته‌ لازم برای تنظیم سربرگ‌ها
+\usepackage{fancyhdr}
+% بسته‌ای برای ظاهر شدن «مراجع» و «نمایه» در فهرست مطالب
+%\usepackage[nottoc]{tocbibind}
+% دستورات مربوط به ایجاد نمایه
+\usepackage{makeidx}
+\makeindex
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% فراخوانی بسته زی‌پرشین و تعریف قلم فارسی و انگلیسی
+\usepackage{xepersian}
+\settextfont[Scale=1.15]{XB Niloofar}
+%\setiranicfont[Scale=1]{PersianModern-Oblique}
+%\setiranicfont[Scale=1.15]{XB Zar Oblique}
+
+%\KashidaOn
+%تنظیم فاصله‌ی خطوط و پاراگراف‌ها
+\linespread{1.3}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% تعریف قلم‌های فارسی و انگلیسی اضافی برای استفاده در بعضی از قسمت‌های متن
+\defpersianfont\nastaliq[Scale=2.02]{IranNastaliq}
+\defpersianfont\chapternumber[Scale=3.02]{XB Niloofar}
+\defpersianfont\titr[Scale=1.02]{XB Titre}
+\defpersianfont\dav[Scale=2]{XB Niloofar}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% دستوری برای حذف کلمه «چکیده»
+\renewcommand{\abstractname}{}
+% دستوری برای حذف کلمه «abstract»
+\renewcommand{\latinabstract}{}
+% دستوری برای تغییر نام کلمه «اثبات» به «برهان»
+\renewcommand\proofname{\textbf{برهان}}
+% دستوری برای تغییر نام کلمه «کتاب‌نامه» به «مراجع»
+\renewcommand{\bibname}{مراجع}
+%استفاده از کلمه‌ی نمودار به جای شکل
+\renewcommand{\figurename}{نمودار}
+% دستوری برای تعریف واژه‌نامه انگلیسی به فارسی
+\newcommand\persiangloss[2]{#1\dotfill\lr{#2}\\}
+% دستوری برای تعریف واژه‌نامه فارسی به انگلیسی 
+\newcommand\englishgloss[2]{#2\dotfill\lr{#1}\\}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% تعریف و نحوه ظاهر شدن عنوان قضیه‌ها، تعریف‌ها، مثال‌ها و ...
+\theoremstyle{definition}
+\newtheorem{definition}{تعریف}[section]
+%\newtheorem{deduct}[definition]{}
+\newtheorem{theorem}[definition]{قضیه}
+\newtheorem{lemma}[definition]{لم}
+\newtheorem{proposition}[definition]{گزاره}
+\newtheorem{corollary}[definition]{نتیجه}
+\newtheorem{remark}[definition]{ملاحظه}
+\newtheorem{example}[definition]{مثال}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% تعریف دستورات جدید برای خلاصه نویسی و راحتی کار در هنگام تایپ فرمول‌های ریاضی
+\newcommand{\mA}{\mathcal{A}}% مجموعه‌ی عامل‌ها
+\newcommand{\mB}{\mathcal{B}}% زیرمجموعه‌ای از عامل‌ها
+\newcommand{\mL}{\mathcal{L}}% زبان
+\newcommand{\mF}{\mathcal{F}}% سیگما جبر
+\newcommand{\mP}{\mathcal{P}}% تخصیص احتمالاتی
+\newcommand{\mK}{\mathcal{K}}% منطق K
+\newcommand{\mS}{\mathcal{S}}% منطق S5
+\newcommand{\mbbP}{\mathbb{P}}% مجموعه‌ی گزاره‌های اتمی
+\newcommand{\mbbQ}{\mathbb{Q}}% مجموعه‌ی اعداد گویا
+\newcommand{\mbbM}{\mathbb{M}}% مجموعه‌ی مدل‌های شناختی احتمالاتی
+\newcommand{\mbbK}{\mathbb{K}}% کلاس مدل‌های کریپکی
+\newcommand{\mbbS}{\mathbb{S}}% کلاس مدل‌های شناختی
+\newcommand{\mbP}{\mathbf{P}}% نماد تابعی احتمالاتی
+\newcommand{\xra}{\xrightarrow}
+\newcommand{\scr}{\scriptscriptstyle}
+\newcommand{\bp}{\begin{proof}}
+\newcommand{\ep}{\end{proof}}
+%\newcommand{\close}{\begin{latin}\noindent $\square$ \end{latin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%تعریف اعداد لاتین برای زمانی که از اعداد فارسی در متن استفاده می‌کنیم
+\def\0{\textrm{\lr{0}}}
+\def\1{\textrm{\lr{1}}}
+\def\2{\textrm{\lr{2}}}
+\def\3{\textrm{\lr{3}}}
+\def\4{\textrm{\lr{4}}}
+\def\5{\textrm{\lr{5}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\reduction{تحویل}
+\def\observation{مشاهده‌محور}
+\def\prior{پیشینی}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% براساس نسخه‌های از ۱.۲.۵ به بعد بسته‌ی bidi در توابع زیر باید توجه داشت:
+% که l یعنی شروع نوشتار از ابتدای خط یا جعبه،
+% و r یعنی شروع نوشتار از انتهای خط یا جعبه، 
+% و s یعنی شروع نوشتار از وسط خط یا جعبه.
+\newdimen\xleftright
+\xleftright=\textwidth
+\advance \xleftright by -10.5cm
+\newcommand{\leftright}[3]{%
+\noindent
+\makebox[4 cm][r]{#1}
+\makebox[\xleftright][s]{}
+\makebox[5.5 cm][l]{#2}
+\makebox[1 cm][l]{#3}%
+}
+\newcommand{\leftrightb}[2]{%
+\noindent
+\makebox[4 cm][r]{#1}
+\makebox[\xleftright][s]{}
+\makebox[6.5 cm][l]{#2}%
+}
+\newcommand{\semanticsa}[2]{%
+\noindent
+\makebox[4.3 cm][r]{#1}
+\makebox[\xleftright][c]{اگر و فقط اگر}
+\makebox[6.2 cm][l]{#2}%
+}
+\newcommand{\semanticsb}[2]{%
+\noindent
+\makebox[3.5 cm][l]{#1}
+\makebox[\xleftright][c]{اگر و فقط اگر}
+\makebox[7 cm][r]{#2}%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% دستورهایی برای سفارشی کردن سربرگ صفحات
+\csname@twosidetrue\endcsname
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[RE,LO]{\thepage}
+\fancyhead[LE]{\small\iranicfamily\leftmark}
+\fancyhead[RO]{\small\iranicfamily\rightmark}
+\renewcommand{\chaptermark}[1]{%
+\markboth{\thechapter.\ #1}{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% دستورهایی برای سفارشی کردن صفحات اول فصل‌ها
+\makeatletter
+\newcommand\mycustomraggedright{%
+ \if@RTL\raggedleft%
+ \else\raggedright%
+ \fi}
+\def\@part[#1]#2{%
+\ifnum \c@secnumdepth >-2\relax
+\refstepcounter{part}%
+\addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+\else
+\addcontentsline{toc}{part}{#1}%
+\fi
+\markboth{}{}%
+{\centering
+\interlinepenalty \@M
+\ifnum \c@secnumdepth >-2\relax
+ \huge\bfseries \partname\nobreakspace\thepart
+\par
+\vskip 20\p@
+\fi
+\Huge\bfseries #2\par}%
+\@endpart}
+\def\@makechapterhead#1{%
+\vspace*{-30\p@}%
+{\parindent \z@ \mycustomraggedright %\@mycustomfont
+\ifnum \c@secnumdepth >\m@ne
+\if@mainmatter
+
+\huge\bfseries \@chapapp\space {\chapternumber\thechapter}
+\par\nobreak
+\vskip 20\p@
+\fi
+\fi
+\interlinepenalty\@M 
+\Huge \bfseries #1\par\nobreak
+\vskip 120\p@
+}}
+\makeatother

@@ -1,0 +1,35 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex text_format_6
+% End of Commands
+\documentclass[twoside]{article}
+\pagestyle{empty}
+\usepackage{color,fancyhdr}
+\pagestyle{fancy} \fancyhf{}
+\fancyheadoffset[RO,LE]{30pt}
+\fancyhead[RO,LE]{عنوان نوشتار}
+\fancyhead[LO]{\rightmark}
+\fancyhead[RE]{\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand\headrule
+ {{\color{blue}%
+   \hrule height 2pt
+          width\headwidth
+   \vspace{1pt}%
+   \hrule height 1pt
+          width\headwidth
+   \vspace{-4pt}}}
+\usepackage{xepersian}
+
+\begin{document}
+\newcommand\sample{%
+این یک متن نمونه است که ممکن است آن را بارها و بارها استفاده کنیم. %
+}
+\section{عنوان اول}
+\subsection{عنوان دوم}
+\sample \sample
+\newpage
+\section{عنوان اول}
+\subsection{عنوان دوم}
+\sample \sample
+\end{document}

@@ -1,0 +1,16 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex matrix-example4
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{gauss}
+\usepackage{xepersian}
+\begin{document}
+\[\begin{gmatrix}[b]
+   1   & 2   & -3\\
+   0.1 & 0.2 & -1\\
+  -0.5 &-1   & \frac{3}{2}
+\rowops\swap{0}{2} \colops\swap{0}{1}
+\end{gmatrix}\]
+\end{document}

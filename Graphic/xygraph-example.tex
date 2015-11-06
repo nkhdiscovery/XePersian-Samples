@@ -1,0 +1,27 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex xygraph-example
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage[all,knot,poly,pdf]{xy}
+\usepackage{xepersian}
+\begin{document}
+\renewcommand{\labelstyle}{\scriptstyle}
+\renewcommand{\objectstyle}{\scriptstyle}
+\[\xygraph{!{0;/r2mm/:}
+  !P3"t"{~>{.}}
+  !P6"h"{~:{(4.5,0):}~>{.}~*{\xypolynode}}
+  !P12"d"{~:{(9,0):}~>{.}~*{\xypolynode}}
+  !P12"D"{~:{(13.,0):}~>{.}~*{\xypolynode}}
+  !{\xoverv~{"h2"}{"h1"}{"t1"}{"t3"}@(.62)}
+  !{\xoverv~{"h4"}{"h3"}{"t2"}{"t1"}@(.62)}
+  !{\xoverv~{"h6"}{"h5"}{"t3"}{"t2"}@(.62)}
+  !{\vover~{"d4"}{"d3"}{"h3"}{"h2"}}
+              ,"d4"-@`{"D5","D6"}"d7",
+  !{\vover~{"d8"}{"d7"}{"h5"}{"h4"}}
+              ,"d8"-@`{"D9","D10"}"d11",
+  !{\vover~{"d12"}{"d11"}{"h1"}{"h6"}}
+              ,"d12"-@`{"D1","D2"}"d3"
+}\]
+\end{document}

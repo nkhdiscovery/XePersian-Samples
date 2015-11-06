@@ -1,0 +1,18 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex footnoteno-example
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{xepersian}
+
+\makeatletter
+\def\@makeLTRfnmark{\hbox{\@textsuperscript{\latinfont\@thefnmark}}}
+\renewcommand\@makefntext[1]{%
+    \parindent 1em%
+    \noindent
+    \hb@xt@1.8em{\hss\if@RTL\@makefnmark\else\@makeLTRfnmark\fi}#1}
+\makeatother
+\begin{document}
+\footnote{آزمایش}\LTRfootnote{This is a test.}
+\end{document}

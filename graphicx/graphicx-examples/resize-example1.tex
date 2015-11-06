@@ -1,0 +1,21 @@
+% !TEX TS-program = XeLaTeX 
+% Commands for running this example:
+% xelatex resize-example1
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\newcommand\HR{\rule{1em}{0.4pt}}
+\usepackage{graphicx}
+\usepackage{xepersian}
+\begin{document}
+\HR\resizebox{20mm}{30mm}{%
+     \begin{tabular}{rrr}
+       بهرام & وفا    & مهران \\
+       رستم  & رهام & سهراب
+     \end{tabular}}\HR
+\HR\resizebox*{20mm}{30mm}{%
+     \begin{tabular}{rrr}
+       بهرام & وفا    & مهران \\
+       رستم  & رهام & سهراب
+     \end{tabular}}\HR
+\end{document}

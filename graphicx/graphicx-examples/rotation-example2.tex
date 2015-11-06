@@ -1,0 +1,15 @@
+% !TEX TS-program = XeLaTeX 
+% Commands for running this example:
+% xelatex rotation-example2
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{graphicx}
+\newcommand\MyRot[1]{\frame
+   {\rotatebox{#1}{چرخش
+                   $#1^\circ$}}}
+\usepackage{xepersian}
+\begin{document}
+\MyRot{0}  \MyRot{45} \MyRot{90}
+\MyRot{135}\MyRot{180}\MyRot{225}
+\end{document}

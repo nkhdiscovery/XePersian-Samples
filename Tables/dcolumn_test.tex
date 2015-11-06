@@ -1,0 +1,33 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex dcolumn_test
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{dcolumn}
+\newcolumntype{+}{D{/}{\mbox{--}}{4}}
+\newcolumntype{,}{D{,}{,}{2}}
+\usepackage{xepersian}
+
+\author{وفا خلیقی}
+
+\begin{document}
+\begin{latin}
+\begin{tabular}{|r||+|
+    >{\raggedright}p{2.2cm}|,|}     \hline
+\multicolumn{4}{|c|}{GG\&A Hoofed Stock}\\
+\hline\hline
+& \multicolumn{1}{c|}{Price}& &
+\\ \cline{2-2} \multicolumn{1}{|c||}{Year}
+& \mbox{low}/\mbox{high}
+& \multicolumn{1}{c|}{Comments}
+& \multicolumn{1}{c|}{Other}    \\ \hline
+1971 & 97/245  &Bad year for farmers in
+        the West. & 23,45       \\ \hline
+  72 &245/245  &Light trading due to a
+        heavy winter.   & 435,23\\ \hline
+  73 &245/2001 &No gnus was very good
+        gnus this year. & 387,56\\ \hline
+\end{tabular}
+\end{latin}
+\end{document}

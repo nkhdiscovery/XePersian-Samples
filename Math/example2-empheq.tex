@@ -1,0 +1,19 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex example2-empheq
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{empheq,graphicx}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\usepackage{xepersian}
+\begin{document}
+این یک متن است
+\begin{empheq}[box=\fbox]{align}
+  f(x)=\int\limits_1^{\infty}\frac{1}{x^2}\diff t=1
+\end{empheq}
+\begin{empheq}[box={\fboxsep=10pt\fbox}]{align}
+  f(x)=\int\limits_1^{\infty}\frac{1}{x^2}\diff t=1
+\end{empheq}
+این یک متن است
+\end{document}

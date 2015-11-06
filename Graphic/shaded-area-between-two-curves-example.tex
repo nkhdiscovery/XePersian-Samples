@@ -1,0 +1,98 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex shaded-area-between-two-curves-example
+% End of Commands
+\documentclass[12pt]{article}
+
+\usepackage{pstricks} % To use the standard "xcolor" package with PSTricks
+\usepackage{pst-node}
+\usepackage{pst-plot}
+\usepackage{pstricks-add}
+
+\definecolor{Orange}{rgb}{1.,0.65,0.}
+
+\pagestyle{empty}
+\usepackage{xepersian}
+\begin{document}
+
+\newcommand{\DeltaL}{1.}         % Length between the two curves
+
+\psset{unit=2em,linewidth=.1}
+
+\begin{center}
+\begin{figure}
+\begin{pspicture}(0,-.3)(10,10) % -.3 due to the coordinates under Ox
+  \psgrid[gridcolor=lightgray,gridlabels=0,subgriddiv=1,griddots=5](10,10)
+  \uput[180](0,10){$1$}         % At the left of Oy
+  \uput[-90](1,0){$a$}          % Under Oy
+  \uput[-90](4,0){$x_0$}        % Under Ox
+  \uput[-90](8,0){$x_1$}
+  \uput[-90](10,0){$b$}
+  \uput[-135](0,0){$0$}         % Origin
+
+  % Area between the two curves
+  \SpecialCoor
+  \psclip{% Clipping of the area between the two curves
+    \pscustom[linestyle=none,linewidth=0]{%
+      \psline(!1 10 1 sqrt div \DeltaL\space sub)(!1 10 1 sqrt div)
+      \psplot{1}{10}{10 x sqrt div}
+      \psline(!10 10 10 sqrt div)(!10 10 10 sqrt div \DeltaL\space sub)
+      \psplot{10}{1}{10 x sqrt div \DeltaL\space sub}}}
+
+  \psframe[linewidth=0pt,fillstyle=crosshatch,hatchcolor=Orange](10,10)
+  \endpsclip
+
+  % The two curves
+  \psplot[linecolor=red]{1}{10}{10 x sqrt div}
+  \psplot[linecolor=blue]{1}{10}{10 x sqrt div \DeltaL\space sub}
+
+  % Four dotted lines
+  \psline[linestyle=dashed,linewidth=.02](!1 10 1 sqrt div)(1,0)    % a
+  \psline[linestyle=dashed,linewidth=.02](!10 10 10 sqrt div)(10,0) % b
+  \psline[linestyle=dashed,linewidth=.02]% x_0 at 2/3*DeltaL from bottom
+    (!4 10 4 sqrt div \DeltaL\space 3 div sub)(4,0)
+  \psline[linestyle=dashed,linewidth=.02]% x_1 at DeltaL/5 from bottom
+    (!8 10 8 sqrt div \DeltaL\space 5 div 4 mul sub)(8,0)
+
+  % Two horizontal lines and two labels left from Oy
+  \psline[linestyle=dashed,linewidth=.02] % of (x_0,\varphi(x_0))
+    (!4 10 4 sqrt div \DeltaL\space 3 div sub)
+    (!0 10 4 sqrt div \DeltaL\space 3 div sub)
+  \uput[180]{0}(!0 10 4 sqrt div \DeltaL\space 3 div sub){$\varphi_{n_0}(x_0)$}
+  \psline[linestyle=dashed,linewidth=.02] % of (x_1,\varphi(x_1))
+    (!8 10 8 sqrt div \DeltaL\space 5 div 4 mul sub)
+    (!0 10 8 sqrt div \DeltaL\space 5 div 4 mul sub)
+  \uput[180]{0}(!0 10 8 sqrt div \DeltaL\space 5 div 4 mul sub){$\varphi_{n_1}(x_1)$}
+
+  % Two labels on (x_0,\varphi(x_0)) and (x_1,\varphi(x_1))
+  \psdots[dotsize=.1](!4 10 4 sqrt div  \DeltaL\space 3 div sub)%
+  \psdots*[dotsize=.1](!8 10 8 sqrt div \DeltaL\space 5 div 4 mul sub)
+
+  % Two small open intervals around x_0 and x_1
+  \psline[linewidth=.02]{]-[}(3.85,0)(4.15,0)
+  \psline[linewidth=.02]{]-[}(7.9,0)(8.1,0)
+
+  % Two arrows showing $f$ et $f-\DeltaL$ with legends
+  \psline[linewidth=.02]{->}(3,2)(!2 10 2 sqrt div \DeltaL\space sub)
+  \uput[-90]{0}(3,2){$f-\overline{\delta}$}
+  \psline[linewidth=.02]{->}(8.5,8)(!6 10 6 sqrt div)
+  \uput[90]{0}(8.5,8){$f$}
+
+  % We show three times DeltaL at the center of vertical lines
+  \pcline[linewidth=.02]{<->}
+    (!10.3 10 10 sqrt div \DeltaL\space sub)(!10.3 10 10 sqrt div)
+  \ncput*[framesep=2pt]{$\delta$}
+  \pcline[linewidth=.02]{<->}
+    (!.7 10 1 sqrt div \DeltaL\space sub)(!.7 10 1 sqrt div)
+  \ncput*[framesep=2pt]{$\delta$}
+  \pcline[linewidth=.02]{<->}
+    (!5 10 5 sqrt div \DeltaL\space sub)(!5 10 5 sqrt div)
+  \ncput*[framesep=2pt]{$\delta$}
+
+  \psline[linewidth=0.06]{<->}(0,10)(0,0)(10,0) % Axes
+\end{pspicture}
+\caption{$p(f)$ برای $f\in\mathcal{C}$}%
+\end{figure}
+\end{center}
+
+\end{document}

@@ -1,0 +1,25 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex threecolumn-footnotes
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage[extrafootnotefeatures]{xepersian}
+
+\threecolumnfootnotes
+\begin{document}
+% In the first page, we typeset footnotes columns from left to right
+\LTRfootnote{Test}\LTRfootnote{Test}\footnote{آزمایش}\LTRfootnote{Test}%
+\LTRfootnote{Test}\LTRfootnote{Test}\footnote{آزمایش}\LTRfootnote{Test}%
+\LTRfootnote{Test}\LTRfootnote{Test}\footnote{آزمایش}\LTRfootnote{Test}%
+\LTRfootnote{Test}\LTRfootnote{Test}\footnote{آزمایش}\LTRfootnote{Test}%
+\LTRfootnote{Test}\LTRfootnote{Test}\footnote{آزمایش}\LTRfootnote{Test}%
+\newpage
+% In this page, we typeset footnotes columns from right to left
+\RTLcolumnfootnotes
+\footnote{آزمایش}\footnote{آزمایش}\LTRfootnote{Test}\footnote{آزمایش}%
+\footnote{آزمایش}\footnote{آزمایش}\LTRfootnote{Test}\footnote{آزمایش}%
+\footnote{آزمایش}\footnote{آزمایش}\LTRfootnote{Test}\footnote{آزمایش}%
+\footnote{آزمایش}\footnote{آزمایش}\LTRfootnote{Test}\footnote{آزمایش}%
+\footnote{آزمایش}\footnote{آزمایش}\LTRfootnote{Test}\footnote{آزمایش}%
+\end{document}

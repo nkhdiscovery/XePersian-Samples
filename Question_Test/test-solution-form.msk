@@ -1,0 +1,6 @@
+\begin {tabularx}{\linewidth }{|Q||D|D|D|D|} \hline &\@headerfont آ&\@headerfont ب&\@headerfont ج&\@headerfont د\\\hline \hline 
+سؤال 1&&X&&\\\hline 
+سؤال 2&X&&&\\\hline 
+سؤال 3&&&X&\\\hline 
+سؤال 4&&&&X\\\hline 
+\end {tabularx}

@@ -1,0 +1,85 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex --shell-escape -interaction=nonstopmode -synctex=-1 Xindy_Quick_Index
+%      xindy -L persian -C utf8 -I xindy -M Xindy_Quick_Index.xdy -t Xindy_Quick_Index.glg -o Xindy_Quick_Index.gls Xindy_Make_Glossaries.glo
+% 	 xelatex --shell-escape -interaction=nonstopmode -synctex=-1 Xindy_Quick_Index
+% End of Commands
+\documentclass[a4paper]{article}
+\pagestyle{empty}
+\renewcommand{\baselinestretch}{0.9} 
+\usepackage{geometry}\geometry{left=35mm,right=35mm,top=25mm,bottom=35mm}
+\usepackage[colorlinks]{hyperref}
+\usepackage{makeidx}
+\makeindex
+\usepackage[quickindex]{xepersian}
+
+\begin{document}
+\عنوان{\lr{Quick Index} \\ ساخت نمایه  با یک بار اجرای \XeLaTeX \\ }
+\نویسنده{\url{http://forum.parsilatex.com/}}
+\date{}
+\عنوان‌ساز
+در این نوشتار  تولید نمایه به روشی را توضیح خواهیم داد که بدون زدن دکمه‌‌ای جداگانه برای \lr{Index}سازی و هیچ دستور دیگری و کار اضافه‌ی دیگری، نمایه به صورت اتوماتیک همزمان با اجرای \XeLaTeX روی فایل‌تان ایجاد خواهد شد.
+\شروع{شمارش}
+\فقره 
+دستور \lr{Quick Build}  را به دستور زیر تغییر دهید.
+\begin{LTR}\begin{verbatim}
+xelatex --shell-escape -interaction=nonstopmode -synctex=-1 %.tex
+\end{verbatim}\end{LTR}
+نکته: اگر از این فایل \lr{TeX} این دستور بالا را در تک‌میکر کپی کنید، کار نخواهد کرد. چون تک‌میکر یک ویرایشگر دو جهته است و کاراکترهای کنترلی یونیکد اضافه می‌کند. در کنار همین فایل، در فایل \lr{readme.txt} دستور را گذاشته‌ایم. از داخل آن کپی کنید و در \lr{Quick Build} بچسبانید. یا اینکه روی خط بالا کلیک راست کرده و \lr{Remove Unicode Control Character} را بزنید و سپس \lr{copy} کنیدو
+\فقره
+بسته‌ی \زی‌پرشین را به صورت 
+\verb|\usepackage[quickindex]{xepersian}|
+ فراخوانی کنید و فایل را با \XeLaTeX اجرا کنید.
+ \پایان{شمارش}
+\زیرقسمت*{نکات:}
+\شروع{شمارش}
+\فقره 
+راهنمای تغییر دستور \lr{Quick Build}
+\شروع{فقرات}
+\فقره تک‌میکر را باز کنید. 
+\فقره منوی \lr{Options} بروید. 
+\فقره گزینه \lr{Configure TeXMaker}  را بزنید. 
+\فقره به \lr{Quick Build}  از پانل سمت چپ بروید. 
+\فقره دستور گفته شده را در آخرین کادر که \lr{user}  هست را جایگزین قبلی کنید.
+\پایان{فقرات}
+\فقره
+این کار یعنی (تولید نمایه با \lr{Xindy}) بهتر از \lr{Make Index} هست. چون \lr{Make Index} با ترتیب بعضی حروف مشکل داره.
+\فقره
+در صورت استفاده از این روش حتما آنتی‌ویروس خود را آپدیت نگه دارید. چون  استفاده از \lr{write18} یک زمینه برای ورود ویروس هست.
+\پایان{شمارش}
+
+
+
+\index{کتاب}
+\index{پارسی‌لاتک}
+\index{بی‌دی}
+\index{سوال}
+\index{عنصر}
+\index{گزینه}
+\index{ژاکت}
+\index{مرکز دانلود}
+\index{اجرا}
+\index{تک‌لایو}
+\index{ثالث}
+\index{جهان}
+\index{چهار}
+\index{حمایت}
+\index{خواهش}
+\index{دنیا}
+\index{زی‌پرشین}
+\index{ریحان}
+\index{شیرین}
+\index{صمیمی}
+\index{ضمیر}
+\index{طبیب}
+\index{ظاهر}
+\index{غریب}
+\index{قوی}
+\index{لاتک}
+\index{نان}
+\index{وحید}
+\index{همه}
+\index{یک}
+
+\printindex
+\end{document}

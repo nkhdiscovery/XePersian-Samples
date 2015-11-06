@@ -1,0 +1,14 @@
+% !TEX TS-program = XeLaTeX 
+% Commands for running this example:
+% xelatex scale-example2
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{graphicx}
+\usepackage{xepersian}
+\begin{document}
+\fbox{\scalebox{1.5}{%
+ \parbox{0.5in}{ایران\\ و\\ خاورمیانه}}}
+\fbox{\scalebox{1.5}[1]{%
+ \parbox{0.5in}{ایران\\ و\\ خاورمیانه}}}
+\end{document}

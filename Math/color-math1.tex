@@ -1,0 +1,28 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex color-math1
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{color,amsmath}
+\usepackage{xepersian}
+\begin{document}
+\begin{align}
+y &= 2x^2 -3x +5\\\nonumber
+  & \hphantom{= \ 2\left(x^2-\frac{3}{2}\,x\right. }%
+         \textcolor{blue}{%
+              \overbrace{\hphantom{+\left(\frac{3}{4}\right)^2- %
+                  \left(\frac{3}{4}\right)^2}}^{=0}}\\[-11pt]
+  &= 2\left(\textcolor{red}{%
+     \underbrace{%
+         x^2-\frac{3}{2}\,x + \left(\frac{3}{4}\right)^2}%
+     }%
+     \underbrace{%
+        - \left(\frac{3}{4}\right)^2 + \frac{5}{2}}%
+     \right)\\
+  &= 2\left(\qquad\textcolor{red}{\left(x-\frac{3}{4}\right)^2}
+     \qquad + \ \frac{31}{16}\qquad\right)\\
+y\textcolor{blue}{-\frac{31}{8}}
+  &= 2\left(x\textcolor{cyan}{-\frac{3}{4}}\right)^2%
+\end{align}
+\end{document}

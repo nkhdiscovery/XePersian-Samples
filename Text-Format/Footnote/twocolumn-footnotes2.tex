@@ -1,0 +1,17 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex twocolumn-footnotes2
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage[extrafootnotefeatures]{xepersian}
+
+\twocolumnfootnotes
+\begin{document}
+% In the first page, we typeset footnotes columns from left to right
+\LTRfootnote{This is a footnote.}\LTRfootnote{This is a footnote.}\footnote{این یک زیرنویس است.}\LTRfootnote{This is a footnote.}\LTRfootnote{This is a footnote.}\LTRfootnote{This is a footnote.}\LTRfootnote{This is a footnote.}
+\newpage
+% In this page, we typeset footnotes columns from right to left
+\RTLcolumnfootnotes
+\footnote{این یک زیرنویس است.}\footnote{این یک زیرنویس است.}\LTRfootnote{This is a footnote.}\footnote{این یک زیرنویس است.}\footnote{این یک زیرنویس است.}\footnote{این یک زیرنویس است.}\footnote{این یک زیرنویس است.}
+\end{document}

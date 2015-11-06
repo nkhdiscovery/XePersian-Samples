@@ -1,0 +1,27 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex example1-empheq
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{amsmath,empheq,xcolor,graphicx}
+\newcommand*\mycolbox[1]{%
+  \colorbox{blue!30!yellow!40}{\hspace{1em}#1\hspace{1em}}}
+\usepackage{xepersian}
+\begin{document}
+این یک متن است
+\begin{subequations}
+\begin{empheq}[% Beginn der Optionen
+    box=\mycolbox,
+    right={\;\makebox[.9em]{$\raisebox{-.5\totalheight+\fontdimen22\textfont2}
+              {\resizebox{!}{\EmphEqdisplayheight+\EmphEqdisplaydepth}{!}}$}},
+    left={X=Y\Rightarrow\empheqlbrace}]{alignat=3}
+%
+    A_1&=b_1 & \qquad c_1&=d_1 & \qquad e_1&= f_1
+         \tag*{\_A\raisebox{1ex}{silly}\raisebox{-1ex}{tag}\_}\\
+    A_2&=b_2 & \qquad c_2&=d_2 & \qquad  e_2&= f_2 \\
+    A_3&=b_3 & \qquad c_3&=d_3 & \qquad  e_3&= f_3
+\end{empheq}
+\end{subequations}
+این یک متن است
+\end{document}

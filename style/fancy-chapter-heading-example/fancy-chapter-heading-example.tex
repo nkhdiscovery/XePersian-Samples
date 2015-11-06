@@ -1,0 +1,42 @@
+% !TEX TS-program = XeLaTeX 
+% Commands for running this example:
+% xelatex fancy-chapter-heading-example
+% xelatex fancy-chapter-heading-example
+% End of Commands
+\documentclass[svgnames]{report}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage[explicit]{titlesec}
+\usepackage{xepersian}
+\renewcommand{\baselinestretch}{1.5}
+\newcommand*\chapterlabel{}
+\titleformat{\chapter}
+  {\gdef\chapterlabel{}
+   \normalfont\Huge\bfseries}
+  {\gdef\chapterlabel{\thechapter\ }}{0pt}
+  {\begin{tikzpicture}[remember picture,overlay]
+    \node[yshift=-3cm] at (current page.north west)
+      {\begin{tikzpicture}[remember picture, overlay]
+        \draw[fill=LightSkyBlue] (0,0) rectangle
+          (\paperwidth,3cm);
+        \node[anchor=west,xshift=.1\paperwidth,rectangle,
+              rounded corners=20pt,inner sep=11pt,
+              fill=MidnightBlue]
+             {{\setRTL\color{white}\chapterlabel#1}};
+       \end{tikzpicture}
+      };
+   \end{tikzpicture}
+  }
+\titlespacing*{\chapter}{0pt}{50pt}{-60pt}
+\begin{document}
+\tableofcontents
+\chapter{مقدمه‌ای بر آنالیز مرکب}
+این یک متن آزمایشی است.
+\chapter{سری‌های حسابی و هندسی}
+\section{تعریف سری}
+این یک متن آزمایشی است.
+\begin{thebibliography}{99}
+\bibitem{Test} 
+این قرار است که یک مرجع باشد.
+\end{thebibliography}
+\end{document}

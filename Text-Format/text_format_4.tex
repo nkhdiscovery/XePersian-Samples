@@ -1,0 +1,39 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex text_format_4
+% 	 xelatex text_format_4
+% End of Commands
+\documentclass{report}
+\pagestyle{empty}
+\usepackage{titletoc}
+\usepackage{xepersian}
+
+\contentsmargin{0pt}
+\titlecontents{chapter}[0pt]
+     {\addvspace{1.4pc}\bfseries}
+     {{\Huge\thecontentspage\quad}}{}{}
+\newcommand\xquad
+     {\hspace{1em plus.4em minus.4em}}
+\titlecontents*{section}[0pt]
+     {\filleft\small}{}{}
+     {,~\thecontentspage}
+     [\xquad\textbullet\xquad][.]
+\setcounter{tocdepth}{1}
+\begin{document}
+\tableofcontents
+\chapter{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\chapter{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\section{این یک عنوان است}
+\contentsfinish
+\end{document}

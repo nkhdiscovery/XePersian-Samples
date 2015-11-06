@@ -1,0 +1,96 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex polydemo-example
+% End of Commands
+\documentclass[12pt]{article}
+\pagestyle{empty}
+\usepackage{geometry,hyperref,color,polynom}
+\geometry{screen}
+\hypersetup{pdfpagemode=FullScreen}
+\usepackage{xepersian}
+%%%%%%%%%%%%%
+%
+% \tokentotext<csname>{<tokens>}
+% converts token sequence into a \texttt-printable form.
+%
+%%%%%%%%%%%%%
+\makeatletter % We'll use three internal LaTeX definitions
+\newcommand\tokentotext[2]{%
+    \def#1{#2}%
+    \edef#1{\expandafter\strip@prefix\meaning#1}%
+    \edef#1{\expandafter\zap@space#1 \@empty}}
+\makeatother
+
+
+\newcounter{currentstage}
+%%%%%%%%%%%%%
+%
+% \dopolylongdiv{<page title>}{<loop min>}{<loop max>}{<key=value list for \polyset>}
+%
+%%%%%%%%%%%%%
+\newcommand\dopolylongdiv[4]{%
+  \begingroup
+    \tokentotext\keyvaluetext{#4}%
+    \polyset{#4}%
+    \setcounter{currentstage}{#2}\addtocounter{currentstage}{-1}%
+    %
+    \loop \ifnum \value{currentstage}<#3\relax
+        \addtocounter{currentstage}{1}%
+        \newpage
+        \section*{\strut#1}\section*{\strut\texttt{\keyvaluetext}}%
+        \[\polylongdiv[stage=\value{currentstage}]{x^3+x^2-1}{x+2}\]
+    \repeat
+  \endgroup}
+%%%%%%%%%%%%%
+%
+% \dopolyhornerscheme{<page title>}{<loop min>}{<loop max>}{<key=value list for \polyset>}
+%
+%%%%%%%%%%%%%
+\newcommand\dopolyhornerscheme[4]{% similar to \dopolylongdiv
+  \begingroup
+    \tokentotext\keyvaluetext{#4}%
+    \polyset{#4}%
+    \setcounter{currentstage}{#2}\addtocounter{currentstage}{-1}%
+    %
+    \loop \ifnum \value{currentstage}<#3\relax
+        \addtocounter{currentstage}{1}%
+        \newpage
+        \section*{\strut#1}\section*{\strut\texttt{\keyvaluetext}}%
+        \[\polyhornerscheme[x=-2,stage=\value{currentstage}]{x^3+x^2-1}\]
+    \repeat
+  \endgroup}
+
+%%%%%%%%%%%%%
+%
+% T H E   D O C U M E N T
+%
+%%%%%%%%%%%%%
+\begin{document}
+
+\LARGE
+
+\dopolylongdiv{تقسیم چند‌جمله‌ای‌ها -- مرحله ۱ تا ۱۰}{1}{10}
+              {}
+
+\dopolylongdiv{تقسیم چند‌جمله‌ای‌ها -- مرحله ۱ تا ۱۱}{1}{11}
+              {style=B}
+
+\dopolylongdiv{تقسیم چندجمله‌ای‌ها -- مرحله ۱ تا ۱۱}{1}{11}
+              {style=C}
+
+\dopolyhornerscheme{روش هورنر -- مرحله ۱ تا ۸}{1}{8}
+                   {}
+
+\dopolyhornerscheme{روش هورنر -- مرحله ۱ تا ۸}{1}{8}
+                   {tutor=true,resultstyle=\color{blue}}
+
+\dopolyhornerscheme{روش هورنر -- قاعده و نتیجه}{8}{8}
+                   {resultbottomrule,resultleftrule,resultrightrule}
+
+\dopolyhornerscheme{روش هورنر -- مرحله ۱ تا ۸}{1}{8}
+                   {tutor=true,tutorlimit=3}
+
+\dopolyhornerscheme{روش هورنر: انتخاب‌های بیشتر}{8}{8}
+                   {showbase=top,showbasesep=false}
+
+\end{document}

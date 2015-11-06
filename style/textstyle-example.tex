@@ -1,0 +1,81 @@
+% !TEX TS-program = XeLaTeX 
+% Commands for running this example:
+% xelatex textstyle-example
+% xelatex textstyle-example
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{xecolor}
+\usepackage{zref-savepos,zref-abspos}
+\usepackage{xepersian}
+\makeatletter
+\newcount\mytextstyle@count
+\mytextstyle@count=\z@
+\newcommand*{\mytextstyle@beg}{%
+ mytextstyle-\the\mytextstyle@count
+}
+\newcommand*{\mytextstyle@end}{%
+ mytextstyle+\the\mytextstyle@count
+}
+\newcommand*{\mytextstyle@aux}{%
+ mytextstyle*\the\mytextstyle@count
+}
+\newif\ifmytextstyle@oneline
+\newcommand*{\mytextstyle}[1]{%
+ \leavevmode
+ \global\advance\mytextstyle@count\@ne
+ \zref@savepos
+ \zref@labelbyprops{\mytextstyle@beg}{abspage,posx,posy}%
+ \zref@savepos
+ \kern1sp\relax
+ \zref@savepos
+ \zref@labelbyprops{\mytextstyle@aux}{posx}%
+ \zref@savepos
+ \kern-1sp\relax
+ \zref@refused{\mytextstyle@beg}%
+ \zref@refused{\mytextstyle@end}%
+ \zref@refused{\mytextstyle@aux}%
+ \mytextstyle@onelinefalse
+ \ifnum\zref@extract{mytextstyle@beg}{abspage}=%
+       \zref@extract{mytextstyle@end}{abspage} %
+   \ifnum\zposy{\mytextstyle@beg}=%
+         \zposy{\mytextstyle@end} %
+     \ifnum\zposx{\mytextstyle@aux}>%
+           \zposx{\mytextstyle@beg} %
+       \ifnum\zposx{\mytextstyle@end}<%
+             \zposx{\mytextstyle@beg} %
+       \else
+         \mytextstyle@onelinetrue
+       \fi
+     \else
+       \ifnum\zposx{\mytextstyle@end}>%
+             \zposx{\mytextstyle@beg} %
+       \else
+         \mytextstyle@onelinetrue
+       \fi
+     \fi
+   \fi
+ \fi
+ \nobreak\hspace\z@
+ \zref@ifrefundefined{\mytextstyle@beg}{%
+   \textbf{#1}%
+ }{%
+   \ifmytextstyle@oneline
+    \textxecolor{blue}{#1}%
+   \else
+   \textxecolor{red}{#1}%
+   \fi
+ }%
+ \zref@savepos
+ \zref@labelbyprops{\mytextstyle@end}{abspage,posx,posy}%
+ \zref@savepos
+}
+\makeatother
+\begin{document}
+این یک متن خیلی ساده است و 
+\mytextstyle{این متن ساده است}
+و این متن
+\mytextstyle{این متن هم ساده است که آن را برای آزمایش بیستر و بیشتر کمی طولانی می‌کنیم تا روی بیشتر از یک خط قرار بگیرد}
+و این هم پایان آزمایش ماست.
+
+\end{document}

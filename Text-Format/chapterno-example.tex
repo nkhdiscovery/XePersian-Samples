@@ -1,0 +1,22 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex chapterno-example
+% End of Commands
+\documentclass{book}
+\pagestyle{empty}
+\usepackage{xepersian}
+
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \if@RTL\raggedleft\else\raggedright\fi \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+\begin{document}
+\tableofcontents
+\chapter{مقدمه}
+این یک متن برای آزمایش است.
+\end{document}

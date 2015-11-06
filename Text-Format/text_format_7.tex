@@ -1,0 +1,21 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex text_format_7
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{colortbl}
+\usepackage{xepersian}
+
+\begin{document}
+\begin{tabular}
+    {>{\columncolor{blue}\color{white}\bfseries}rl}
+\rowcolor[gray]{0.8}
+    \color{black} روز & \bfseries تعداد حاضرین\\[2pt]
+دوشنبه&    57 \\  سشنبه&   11 \\
+چهرشنبه& 96 \\  پنجشنبه& 122 \\
+جمعه&   210 \\  شنبه& 198 \\
+یکشنبه&    40 \\
+\cellcolor[gray]{0.8}\color{black}جمع& 724
+\end{tabular}
+\end{document}

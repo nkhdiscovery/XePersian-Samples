@@ -1,0 +1,41 @@
+% !TEX TS-program = XeLaTeX
+%%%  یک نمونه پروژه/پایان‌نامه/رساله با استفاده از کلاس Tabriz_thesis، نسخه 1.1
+%%%  وحید دامن‌افشان، دانشگاه صنعتی کرمانشاه،       http://www.damanafshan.ir
+%%%  تالار گفتگوی پارسی‌لاتک،       http://forum.parsilatex.com
+%%%   آپدیت شده در اسفند ۹۱
+
+%-----------------------------------------------------------------------------------------------------
+%        توجه داشته باشید برای دیدن خروجی کامل شامل نمایه و فهرست مطالب، ابتدا دو بار این فایل را
+%        را اجرا کرده، سپس با استفاده از خط فرمان، به مسیر پوشه جاری رفته و دستور 
+% xindy -L persian -C utf8 -M texindy -M page-ranges tabriz-thesis.idx
+%        را در خط فرمان اجرا کنید. سپس دو بار دیگر، این فایل را اجرا کنید. 
+%        اگر قصد نوشتن پروژه کارشناسی را دارید، در خط زیر به جای msc، کلمه bsc و اگر قصد نوشتن رساله دکتری
+%        را دارید، کلمه phd را قرار دهید. کلیه تنظیمات لازم، به طور خودکار، اعمال می‌شود.
+\documentclass[msc]{tabriz-thesis}
+\csname@twosidetrue\endcsname
+\usepackage{xepersian}
+\settextfont[Scale=1.1]{XB Niloofar}
+\defpersianfont\nastaliq[Scale=2]{IranNastaliq}
+% چنانچه می‌خواهید اعداد در فرمول‌ها، انگلیسی باشد، خط زیر را غیرفعال کنید.
+\setdigitfont[Scale=1.1]{Yas}
+\begin{document}
+\baselineskip=.75cm
+\pagenumbering{harfi}
+\input{fa-title}
+\tableofcontents\clearpage
+%\listoffigures\clearpage
+%\listoftables\clearpage
+\pagenumbering{arabic}
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\appendix
+\include{appendix1}
+\include{references}
+\baselineskip=.75cm
+\include{dicfa2en}
+\include{dicen2fa}
+\printindex
+\input{en-title}
+\label{LastPage}
+\end{document}

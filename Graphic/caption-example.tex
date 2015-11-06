@@ -1,0 +1,51 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex caption-example
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{xepersian}
+\makeatletter
+\def\caption{\@ifstar\starcaption\notstarcaption}
+\def\starcaption{%
+   \ifx\@captype\@undefined
+     \@latex@error{\noexpand\caption outside float}\@ehd
+     \expandafter\@gobble
+   \else
+     \refstepcounter\@captype
+     \expandafter\@firstofone
+   \fi
+   {\@dblarg{\@starcaption\@captype}}%
+}
+\def\notstarcaption{%
+   \ifx\@captype\@undefined
+     \@latex@error{\noexpand\caption outside float}\@ehd
+     \expandafter\@gobble
+   \else
+     \refstepcounter\@captype
+     \expandafter\@firstofone
+   \fi
+   {\@dblarg{\@caption\@captype}}%
+}
+\long\def\@starcaption#1[#2]#3{%
+  \par
+  \addcontentsline{\csname ext@#1\endcsname}{#1}%
+    {\protect\numberline{\csname the#1\endcsname}{\ignorespaces #2}}%
+  \begingroup
+    \@parboxrestore
+    \if@minipage
+      \@setminipage
+    \fi
+    \normalsize
+    \@makecaption{\csname #1name\endcsname}{\ignorespaces #3}\par
+  \endgroup}
+\makeatother
+\begin{document}
+\begin{figure}
+\caption{این یک شکل با شماره است.}
+\end{figure}
+
+\begin{figure}
+\caption*{این یک شکل بدون شماره است.}
+\end{figure}
+\end{document}

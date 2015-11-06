@@ -1,0 +1,50 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex break_quation
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{amsmath}
+\usepackage{breqn}
+\usepackage{xepersian}
+\settextfont{XB Zar}
+%\setlatintextfont{Linux Libertine}% از نسخه ۱.۰.۴ زی‌پرشین این دستور الزامی نیست و قلم  پیش‌فرض تک مورد استفاده قرار می‌گیرد.
+%\setdigitfont{XB Zar}
+\title{شکستن خودکار فرمول}
+\author{}
+\begin{document}
+\maketitle
+با استفاده از بستهٔ \lr{breqn} می‌توانید فرمول را بصورت خودکار بشکنید و نیازی به محیط \lr{align} ندارید. \lr{breqn} جزو بسته \lr{mh} می‌باشد.
+
+ضمناً  breqn باید بعد از amsmath فراخوانی شود و  گاهی اوقات فرمولها را آن جوری که ما دوست داریم نمی‌شکند!
+
+\begin{dmath}[label={sna74}]
+\frac{1}{6} \left(\sigma(k,h,0) +\frac{3(h-1)}{h}\right)
++\frac{1}{6} \left(\sigma(h,k,0) +\frac{3(k-1)}{k}\right)
+=\frac{1}{6} \left(\frac{h}{k} +\frac{k}{h} +\frac{1}{hk}\right)
++\frac{1}{2} -\frac{1}{2h} -\frac{1}{2k},
+\end{dmath}
+
+\begin{dmath*}
+T(n) \hiderel{\leq} T(2^{\lceil\lg n\rceil})
+\leq c(3^{\lceil\lg n\rceil}
+-2^{\lceil\lg n\rceil})
+<3c\cdot3^{\lg n}
+=3c\,n^{\lg3}
+\end{dmath*}
+
+\begin{dgroup*}
+\begin{dmath*}
+H_1^3 = x_1 + x_2 + x_3
+\end{dmath*},
+\begin{dmath*}
+H_2^2 = x_1^2 + x_1 x_2 + x_2^2 - q_1 - q_2
+\end{dmath*},
+\begin{dsuspend}
+و
+\end{dsuspend}
+\begin{dmath*}
+H_3^1 = x_1^3 - 2x_1 q_1 - x_2 q_1
+\end{dmath*}.
+\end{dgroup*}
+\end{document}

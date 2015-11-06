@@ -1,0 +1,61 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex boxes-with-text-and-math
+% End of Commands
+\documentclass{article}
+\usepackage[left=2.5cm,right=2.5cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{shapes,snakes}
+\usepackage{amsmath,amssymb}
+
+
+\usepackage{xepersian}
+
+\begin{document}
+\thispagestyle{empty}
+
+% Define box and box title style
+\tikzstyle{mybox} = [draw=red, fill=blue!20, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
+\tikzstyle{fancytitle} =[fill=red, text=white]
+
+\begin{tikzpicture}
+\setRTL
+\node [mybox] (box){%
+    \begin{minipage}{0.50\textwidth}
+      این یک معادله هست که در اینجا می‌نویسم تا به شما نشان بدهیم
+        \begin{align}
+            \dot{n} &= u\cos\psi -v\sin\psi \\
+            \dot{e} &= u\sin\psi + v\cos\psi
+        \end{align}
+        که چگونه می‌توان تعدادی معادله در این جعبه قرار داد تا به زیبایی نوشته کمک کند.
+        \begin{align}
+            \dot{n} &= u -v\delta_\psi \\
+            \dot{e} &= u\delta_\psi + v
+        \end{align}
+    \end{minipage}
+};
+\node[fancytitle, left=10pt] at (box.north east) {\hboxR{یک عنوان}};
+\node[fancytitle, rounded corners] at (box.west) {$\clubsuit$};
+\end{tikzpicture}%
+
+\bigskip
+\tikzstyle{mybox} = [draw=blue, fill=green!20, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
+\tikzstyle{fancytitle} =[fill=blue, text=white, ellipse]
+\begin{tikzpicture}[transform shape, rotate=10, baseline=-3.5cm]
+\setRTL
+\node [mybox] (box) {%
+    \begin{minipage}[t!]{0.5\textwidth}
+        طبق آخرین قضیهٔ فِرْما داریم:
+        \[
+            x^n + y^n = z^n
+        \]
+        معادلهٔ فوق جواب صفر برای $x$, $y$ و $z$ ندارد وقتیکه $n > 2$.
+    \end{minipage}
+    };
+\node[fancytitle] at (box.north) {\hboxR{آخرین قضیهٔ فِرْما}};
+\end{tikzpicture}
+%
+
+\end{document}

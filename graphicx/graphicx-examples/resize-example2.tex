@@ -1,0 +1,15 @@
+% !TEX TS-program = XeLaTeX 
+% Commands for running this example:
+% xelatex resize-example2
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\newcommand\HR{\rule{1em}{0.4pt}}
+\usepackage{graphicx}
+\usepackage{xepersian}
+\begin{document}
+\HR\fbox{\resizebox{\width}{.7\height}{%
+   \parbox{14mm}{کرمانشاه،\\ شیراز و\\خرمشهر}}}\HR
+\fbox{\resizebox{\width}{.7\totalheight}{%
+  \parbox{14mm}{کرمانشاه،\\ شیراز و\\خرمشهر}}}\HR
+\end{document}

@@ -1,0 +1,13 @@
+%!PS-Adobe-2.0
+%%BoundingBox:100 100 150 150
+100 100     translate % put origin at 100 100
+  0   0     moveto    % define current point
+ 50  50     rlineto   % trace diagonal line
+ 50 neg 0   rlineto   % trace horizontal line
+ 50  50 neg rlineto   % trace other diagonal line
+stroke                % draw (stroke) the lines
+  0   0     moveto    % redefine current point
+/Times-Roman findfont % get Times-Roman font
+ 50         scalefont % scale it to 50 big points
+            setfont   % make it the current font
+(W) show              % draw an uppercase W

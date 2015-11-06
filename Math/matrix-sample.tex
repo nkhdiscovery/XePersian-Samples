@@ -1,0 +1,38 @@
+% !TEX TS-program = XeLaTeX 
+% Commands for running this example:
+% xelatex matrix-sample
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{arydshln}
+\usepackage{xepersian}
+\begin{document}
+\[
+\left[
+\setlength{\dashlinedash}{2pt}
+\setlength{\dashlinegap}{2pt}
+\begin{array}{c:cc}
+\begin{array}{cccc}
+\lambda_{1} & 1 & \cdots & 0 \\
+0 & \lambda_{1} & \ddots & \vdots \\
+\vdots & & \ddots & 1 \\
+0 & & \cdots & \lambda_{1}
+\end{array} & \left.{\vphantom{\begin{array}{cccc}
+\lambda_{1} & 1 & \cdots & 0 \\
+0 & \lambda_{1} & \ddots & \vdots \\
+\vdots & & \ddots & 1 \\
+0 & & \cdots & \lambda_{1}
+\end{array}}}\right\}{}_k & \\
+\cdashline{1-2}
+\underbrace{\hphantom{\begin{array}{cccc}
+\lambda_{1} & 1 & \cdots & 0 \\
+0 & \lambda_{1} & \ddots & \vdots \\
+\vdots & & \ddots & 1 \\
+0 & & \cdots & \lambda_{1}
+\end{array}}}_{k} & \multicolumn{1}{c:}{\phantom{x}} \\
+\cdashline{2-3}
+\multicolumn{2}{c:}{\phantom{x}} & {\phantom{x}}
+\end{array}
+\right]
+\] 
+\end{document}

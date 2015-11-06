@@ -1,0 +1,27 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex shaded-displaymath
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{color,amsmath}
+\usepackage{esint}
+\def\Q#1#2{\frac{\partial #1}{\partial #2}}
+\usepackage{framed}
+\definecolor{shadecolor}{rgb}{1,0.9,0.7}
+\usepackage{xepersian}
+\begin{document}
+\begin{shaded}
+\begin{align}
+\underset{\mathcal{G}\quad}\iiint\!%
+	\left[u\nabla^{2}v+\left(\nabla u,\nabla v\right)\right]d^{3}V%
+	=\underset{\mathcal{S}\quad}\oiint u\Q{v}{n}d^{2}A
+\end{align}
+\begin{align}
+\underset{{\mathcal{G}\quad}}\iiint\!%
+	\left[u\nabla^{2}v-v\nabla^{2}u\right]d^{3}V%
+	=\underset{\mathcal{S}\quad}\oiint%
+	\left(u\Q{v}{n}-v\Q{u}{n}\right)d^{2}A
+\end{align}
+\end{shaded}
+\end{document}

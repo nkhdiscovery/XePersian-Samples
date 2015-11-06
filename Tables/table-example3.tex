@@ -1,0 +1,22 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex table-example3
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{xcolor,booktabs}
+\usepackage{xepersian}
+
+\newlength{\basis}\setlength{\basis}{10cm} \newlength{\barlength}
+\newcommand*{\Bar}[1]{%
+  \setlength{\barlength}{0.01\basis}\setlength{\barlength}{#1\barlength}%
+  \textcolor{black!40}{\rule{\barlength}{1.5ex}}$\%#1$}
+
+\begin{document}
+\begin{tabular}{@{}rr@{}}\toprule
+\multicolumn{2}{c}{نظرخواهی عمومی درباره وضع رفاه عمومی ($n=509$)}
+    \\\midrule
+\Bar{57}  & خیلی زیاد   \\ \Bar{23}  & زیاد\\
+\Bar{12}  & کمی زیاد\\ \Bar{8}   & کم\\\bottomrule
+\end{tabular}
+\end{document}

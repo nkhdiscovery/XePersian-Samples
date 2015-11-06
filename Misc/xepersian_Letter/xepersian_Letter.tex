@@ -1,0 +1,39 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex xepersian_Letter
+% End of Commands
+\documentclass[10pt,a5paper]{letter}
+\pagestyle{empty}
+\usepackage[top=29mm, bottom=29mm, left=25mm, right=25mm]{geometry}
+\usepackage{url}
+
+\usepackage{xepersian}
+
+\name{محمود}
+\signature{محمود امین‌طوسی}
+\address{
+دانشگاه حکیم سبزواری، \\دانشکده ریاضی و علوم کامپیوتر\\
+اتاق ۱۳۸\\
+تلفن:05714003027 \\
+\lr{m.amintoosi@gmail.com}
+}
+%\date{} %اگر کامنت را حذف کنید تاریخ را نخواهید داشت.
+
+\begin{document}
+
+\begin{letter}{\centerline{باسمه تعالی}}
+\opening{جناب آقای دکتر صفاپور دبیر محترم چهل و دومین کنفرانس ریاضی ایران}
+
+سلام علیکم؛\\
+
+پیروی مذاکرات قبلی انجام شده جنابعالی با جناب آقای وفا خلیقی، احتراماً به استحضار می رساند اینجانب \textit{ محمود امین طوسی}
+\LTRfootnote{\url{http://profsite.sttu.ac.ir/mamintoosi}}
+ موافقت خود برای برگزاری کارگاه آموزشی زی‌پرشین در کنفرانس ریاضی را اعلام می‌دارم.
+
+شایان ذکر است که کارگاه با همکاری جناب آقای \textit{هادی صفی‌اقدم} برگزار خواهد شد.
+
+\closing{با احترام :}
+\encl{جزییات برنامه کارگاه به پیوست می‌باشد.}
+
+\end{letter}
+\end{document}

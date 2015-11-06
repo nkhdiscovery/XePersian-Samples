@@ -1,0 +1,103 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex sample
+% 	 xelatex sample
+% End of Commands
+\documentclass[oneside]{thesis}
+%برای پایان‌نامه ارشد، از خط زیر به جای خط بالا استفاده کنید
+%\documentclass[MsThesis,oneside]{thesis}
+%اگر نسخه دو رو از پایان‌نامه را می‌خواهید، oneside راحذف کنید
+\usepackage[colorlinks=true]{hyperref}
+
+\usepackage{amssymb}
+\usepackage{xepersian}
+%\settextfont[Scale=1]{XBNiloofar}
+%\setdigitfont{Yas}%{PGaramond}
+
+\localisecommands
+\شروع{نوشتار}
+
+\آرم{\درج‌تصویر{logo}}
+\تاریخ{۱۰ مهر ۱۳۹۰}
+\عنوان{استفاده از کلاس پایان‌نامه در زی‌لاتک}
+\نویسنده{محسن شریفی تبار}
+\دانشگاه{دانشگاه صنعتی شریف\\دانشکده علوم ریاضی}
+\موضوع{‌ریاضی محض}
+\استادراهنما{دکتر راهنما}
+\استادمشاور{دکتر مشاور}
+\تقدیم{\درشت تقدیم به ...}
+\frontmatter \makethesistitle \pagestyle{empty} \baselineskip1.2\baselineskip
+\شروع{تصویب}
+\داور{ممتحن داخلی}{آقای وفا خلیقی}
+\داور{ممتحن داخلی}{دکتر مهدی امیدعلی}
+\داور{داور خارجی}{آقای محمود امین‌طوسی}
+\داور{داور خارجی}{آقای سیدرضی علوی‌زاده}
+\پایان{تصویب}
+
+\شروع{قدردانی}
+تشکر از استاد راهنما، \\ و تشکر از آقای وفا خلیقی که با طراحی بسته \XePersian\ کمک بزرگی به حروف‌چینی فارسی کردند،
+\پرش‌بلند\شروع{وسط‌چین}\درشت و تشکر از خداوند.\پایان{وسط‌چین}
+\پایان{قدردانی}
+
+\شروع{چکیده}{کلمه کلیدی اول، کلمه کلیدی دوم، کلمه کلیدی سوم} 
+این رساله، چکیده مشخصی ندارد.
+\پایان{چکیده}
+\pagestyle{plain}\pagenumbering{tartibi}\tableofcontents\listoffigures
+\فصل*{پیش‌گفتار}
+یک رساله خوب، بایستی پیش‌گفتار زیبا و رسایی داشته باشد.
+\mainmatter \pagestyle{headings} \baselineskip1.1\baselineskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\فصل{مقدمه}\برچسب{chap:intro}
+در این فصل چند مثال نمونه از قضیه و لم و تصاویر قرار می‌دهیم تا نتیجه و خروجی را مشاهده کنیم.
+%%%%%%%%%%%%%%%%%%%%%%%%
+\قسمت{قضیه اساسی تساوی}
+در این قسمت، یک قضیه می‌بینیم،
+\شروع{قضیه}[قضیه اساسی تساوی]\برچسب{thm:eqtheorem}
+برای هر عدد حقیقی $a\in\mathbb R$ داریم،
+\begin{equation}\label{eq:eqtheorem}a^2=a^2.\end{equation}
+\پایان{قضیه}
+
+\قسمت{اثبات قضیه اساسی تساوی}
+در این قسمت، قضیه \رجوع{thm:eqtheorem} را اثبات می‌کنیم. برای این کار به لم زیر احتیاج داریم.
+\شروع{لم}
+مربع هر عدد حقیقی، یک عدد حقیقی است.
+\پایان{لم}
+\شروع{مثال}
+مربع عدد $\sqrt 2$، عدد $2$ است که یک عدد حقیقی است.
+\پایان{مثال}
+
+در اینجا برای اینکه مطالب بدیهی را نگفته باشیم، از اثبات قضیه و لم مورد نظر چشم‌پوشی می‌کنیم. فقط به شماره‌گذاری قضیه و لم و مثال توجه کنید. به نظر مؤلف، این روش شماره‌گذاری بهتر از این است که قضایا و لم‌ها و مثال‌ها و \ldots جداجدا شماره‌گذاری شوند.
+
+\شروع{شکل}
+\تنظیم‌ازوسط\زی‌پرشین
+\شرح{شکل نمونه‌ای، آرم زیپرشین}
+\پایان{شکل}
+
+\PrepareForBiblio
+
+\begin{thebibliography}{1}
+\begin{LTRbibitems}
+\setpersianfont\bibitem{parsilatex}\resetlatinfont
+\newblock {\itshape ParsiLaTeX}.
+\newblock {http://parsilatex.com}
+\setpersianfont\bibitem{StBu}\resetlatinfont
+Stoer, J. and Bulirsch, R.
+\newblock {\itshape Introduction to numerical analysis},  Vol.~12 of {\itshape Texts in Applied Mathematics}.
+\newblock Springer-Verlag, New York, third Ed., 2002.
+\newblock Translated from the German by R. Bartels, W. Gautschi and C. Witzgall.
+\end{LTRbibitems}
+\end{thebibliography}
+
+\PrepareForLatinPages
+\date{October 6, 2011}
+\title{\sffamily Thesis Class in XeLaTeX}
+\author{\sffamily Mohsen SHARIFI TABAR}
+\university{Sharif University of Technology\\Department of Mathematical Sciences}
+\subject{Pure Mathematics}
+\supervisor{\sffamily Dr. Supervisor}
+\consult{\sffamily Dr. Consult}
+\begin{abstract}{first latin keyword, second latin keyword, third latin keyword.}
+There is no special abstract for this thesis.
+\end{abstract}
+\makethesistitle
+\پایان{نوشتار}

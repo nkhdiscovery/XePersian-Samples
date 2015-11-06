@@ -1,0 +1,21 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex table-example1
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{xepersian}
+
+\begin{document}
+\begin{tabular}{@{}cccc@{}}\hline
+\multicolumn{2}{|@{}c}{\textbf{مردم}} &
+   \multicolumn{2}{@{}c|}{\textbf{شغل}}\\\hline
+تعداد& جنسیت  & استخدام‌شده & آزاد\\\hline
+222   &  مرد   &    160   & 62       \\
+  2   &  زن  &\textbf{1}& 2        \\[5pt]
+97    &  زن   &    70    & 27       \\\hline
+\multicolumn{4}{c}{sums}           \\\cline{1-1}
+\multicolumn{1}{@{}|c|@{}}{319} & & 230 & 89 \\\cline{1-1}\cline{3-4}
+      &      & \multicolumn{2}{|c|}{319}\\\cline{3-4}
+\end{tabular}
+\end{document}

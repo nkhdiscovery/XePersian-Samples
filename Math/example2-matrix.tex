@@ -1,0 +1,32 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex example2-matrix
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{array}
+\usepackage[table]{xcolor}
+\definecolor{umbra}{rgb}{0.8,0.8,0.5}
+\newcommand*\zero{\multicolumn{1}{>{\columncolor{white}}c}{0}}
+\newcommand\colCell[2]{\multicolumn{1}{>{\columncolor{#1}}c}{#2}}
+\usepackage{xepersian}
+\begin{document}
+\delimitershortfall=-3pt
+\[
+\left[\,
+\begin{array}{*{5}{>{\columncolor[gray]{0.95}}c}}
+  h_{k,1,0}(n) & h_{k,1,1}(n) & h_{k,1,2}(n) & \zero & \zero \\
+  h_{k,2,0}(n) & h_{k,2,1}(n) & h_{k,2,2}(n) & \zero & \zero \\
+  h_{k,3,0}(n) & h_{k,3,1}(n) & h_{k,3,2}(n) & \zero & \zero \\
+  h_{k,4,0}(n) & \colCell{umbra}{h_{k,4,1}(n)} & h_{k,4,2}(n) & \zero & \zero \\
+  \zero & h_{k,1,0}(n-1) & h_{k,1,1}(n-1) & h_{k,1,2}(n-1) & \zero \\
+  \zero & h_{k,2,0}(n-1) & h_{k,2,1}(n-1) & h_{k,2,2}(n-1) & \zero \\
+  \zero & h_{k,3,0}(n-1) & h_{k,3,1}(n-1) & h_{k,3,2}(n-1) & \zero \\
+  \zero & \colCell{umbra}{h_{k,4,0}(n-1)} & h_{k,4,1}(n-1) & h_{k,4,2}(n-1) & \zero \\
+  \zero & \zero & h_{k,1,0}(n-2) & h_{k,1,1}(n-2) & h_{k,1,2}(n-2)\\
+  \rowcolor[gray]{0.75}%
+  \zero & \zero & h_{k,2,0}(n-2) & h_{k,2,1}(n-2) & h_{k,2,2}(n-2)\\
+  \zero & \zero & h_{k,3,0}(n-2) & h_{k,3,1}(n-2) & h_{k,3,2}(n-2)\\
+  \zero & \zero & h_{k,4,0}(n-2) & h_{k,4,1}(n-2) & h_{k,4,2}(n-2)
+\end{array} \,\right]_{12\times 5}\]
+\end{document}

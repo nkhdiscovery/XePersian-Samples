@@ -1,0 +1,31 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex colortbl-example2
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{colortbl}
+\usepackage{xepersian}
+
+\begin{document}
+این هم تقریباً همان جدولی است که در پرونده‌های نمونه تک‌پارسی\footnote{اگر به دقت به این نمونه و نمونهٔ موجود در پرونده‌های تک‌پارسی نگاه کنید متوجه یک باگ در تک‌پارسی خواهید شد، اصولاً کلمهٔ «قیمت» بایستی در منتها علیه سمت چپ قرار گیرد مانند جدول زیر که درست است اما در نمونهٔ موجود در تک‌پارسی، کلمهٔ «قیمت» به جای اینکه در سمت چپ قرار بگید، در وسط قرار دارد.} موجود است و توسط بستهٔ \textsf{colortbl} تولید شده است:
+
+\setlength{\extrarowheight}{2mm}
+\setlength{\tabcolsep}{2mm}
+\begin{center}
+\begin{tabular}{|l|%
+>{\columncolor{yellow}}c|c|>{\columncolor{yellow}}c|c|%
+>{\columncolor{red}\bfseries}c<{\textsc{GBP}}|}
+\hline
+\multicolumn{3}{>{\columncolor{red}}r}{\color{white}\textbf{لَنْدَنْ}}
+&\multicolumn{3}{>{\columncolor{red}}l}{\color{white}\textbf{قیمت}}
+\\[1pt]
+\hline
+سیدنی & OG4G &سشنبه ۱۰ اکتبر &دوشنبه ۲۱ اکتبر یا ۲۸‌ام &11 یا ۱۸ روز &999\\
+& &سشنبه ۱۷ اکتبر &دوشنبه ۲۱ اکتبر یا ۲۸‌ام & 4 یا ۱۱ روز &999\\
+& OG7A &یکشنبه ۱۱ اکتبر &دوشنبه ۲۱ اکتبر یا ۲۸‌ام & 8 یا ۱۵ روز &999\\
+& &یکشنبه ۲۰ اکتبر &دوشنبه ۲۸ اکتبر & 8 روز &999\\
+\hline
+\end{tabular}
+\end{center}
+\end{document}

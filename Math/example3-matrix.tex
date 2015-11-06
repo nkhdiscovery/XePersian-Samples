@@ -1,0 +1,21 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex example3-matrix
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{amsmath}
+\usepackage{xepersian}
+\begin{document}
+\begin{flalign} z &= f(x,y) \end{flalign}
+\begin{align}
+\bordermatrix{%
+   & c & o & l & u & m & n \cr
+ l & 1 & 0 & 0 & 0 & \cos \phi & \sin\phi\cr
+ i & 0 & 1 & 0 & 0 & -\sin\phi & \cos\phi\cr
+ n & 0 & 0 & 1 & 0 &     0     &     0   \cr
+ e & 0 & 0 & 0 & 1 &     0     &     0   \cr}
+\end{align}
+\renewcommand\theequation{\arabic{equation}}
+\begin{flalign} y &= f(x) \end{flalign}
+\end{document}

@@ -1,0 +1,39 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex computer-science-mindmap-fa
+% End of Commands
+\documentclass[a4paper,landscape]{article}
+% تقسیم بندی ذکر شده قابل استناد نیست.
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees,shadows}
+
+\usepackage[top=29mm, bottom=29mm, left=19mm, right=19mm]{geometry}
+
+\usepackage{xepersian}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{tikzpicture}
+\path[mindmap,concept color=black,text=white]
+node[concept] {\rl{{\small جنبه‌های مختلف} {\Large \em علوم کامپیوتر}}}
+[clockwise from=0]
+child[concept color=green!50!black] {
+node[concept] {\rl{عملی}}
+[clockwise from=90]
+child { node[concept] {\rl{الگوريتم‌ها}} }
+child { node[concept] {\rl{ساختمان داده‌ها} }}
+child { node[concept] {\rl{زبانهای برنامه‌نویسی} }}
+child { node[concept] {\rl{مهندسی نرم‌افزار} }}
+}
+child[concept color=red] { node[concept] {\rl{فنی} }}
+child[concept color=orange] { node[concept] {\rl{نظری} }}
+child[concept color=blue] {
+node[concept] {\rl{پیاده‌سازی}}
+[clockwise from=-150]
+child { node[concept] {\rl{بانک‌های اطلاعاتی} }}
+child { node[concept] {\rl{تور جهان‌گستر} }}
+}
+;
+\end{tikzpicture}
+\end{document}
+

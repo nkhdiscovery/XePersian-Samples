@@ -1,0 +1,22 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex color-math2
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{color,amscd,amsmath}
+\usepackage{xepersian}
+\begin{document}
+\[\color{magenta}
+\left(\prod^n_{\, j=1}\hat{x}_j\right)H_c=%
+    \frac{1}{2}\hat{k}_{ij}\det\widehat{\mathbf{K}}(i|i)
+\]
+
+\begin{align}\color{blue}
+\begin{CD}
+  R\times S\times T @>\text{محدودیت}>> S\times T \\
+        @VprojVV                            @VVprojV \\
+  R\times S         @<<\text{\textcolor{red}{شمول}}< S
+\end{CD}
+\end{align}
+\end{document}

@@ -1,0 +1,35 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex dodecahedron
+% End of Commands
+\documentclass{minimal}
+\usepackage{tikz}
+\usetikzlibrary{folding}
+
+\usepackage{xepersian}
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+% Paper folding library
+\begin{tikzpicture}[transform shape]
+\tikzfoldingdodecahedron
+    [folding line length=14mm,
+    face 1={ \node[red] {فروردین};},
+    face 2={ \node {اردیبهشت};},
+    face 3={ \node {خرداد};},
+    face 4={ \node {تیر};},
+    face 5={ \node {مرداد};},
+    face 6={ \node {شهریور};},
+    face 7={ \node {مهر};},
+    face 8={ \node {آبان};},
+    face 9={ \node {آذر};},
+    face 10={\node {دی};},
+    face 11={\node {بهمن};},
+    face 12={\node {اسفند};}];
+\end{tikzpicture}
+
+\end{document}
+

@@ -1,0 +1,1 @@
+xelatex --shell-escape -interaction=nonstopmode -synctex=-1 %.tex

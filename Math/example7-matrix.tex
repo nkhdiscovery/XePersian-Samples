@@ -1,0 +1,24 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex example7-matrix
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\usepackage{amsmath,array}
+\usepackage{xepersian}
+\begin{document}
+\setlength\delimitershortfall{-1pt}
+\begin{align}
+\underline{A} &= \left[\begin{array}{*7c}
+    a_{11} & a_{12} & 0 & \ldots & \ldots & \ldots & 0\\
+    a_{21} & a_{22} & a_{23} & 0 & \ldots & \ldots & 0\\
+    0 & a_{32} & a_{33} & a_{34} & 0 & \ldots & 0\\
+    \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+    \hdotsfor{7}\\
+    \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots\\
+    0 & \ldots & 0 & a_{n-2,n-3} & a_{n-2,n-2} & a_{n-2,n-1} & 0\\
+    0 & \ldots & \ldots & 0 & q_{n-1,n-2} & a_{n-1,n-1} & a_{n-1,n}\\
+    0 & \ldots & \ldots & \ldots & 0 & a_{n,n-1} & a_{nn}
+  \end{array}\right]
+\end{align}
+\end{document}

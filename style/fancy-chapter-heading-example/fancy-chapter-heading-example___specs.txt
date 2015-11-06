@@ -1,0 +1,4 @@
+حروف‌چینی فانتزی فصل
+زی‌پرشین
+حروف‌چینی
+<p>این نمونه با کمی تغییر از<a href="http://texblog.net/latex-archive/layout/fancy-chapter-tikz/"> اینجا</a> برداشته شده.</p>

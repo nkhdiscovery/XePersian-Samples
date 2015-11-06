@@ -1,0 +1,65 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex main
+% 	 bibtex8 -W -c cp1256fa main
+% 	 xindy -L persian -C utf8 -M texindy main
+% 	 xelatex main
+% 	 xelatex main
+% End of Commands
+\documentclass[a4paper,11pt,msc]{SBU}
+\input{commands}
+\begin{document}
+\frontmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%صفحه‌ی بسم الله
+%\thispagestyle{empty}
+%\centerline{{\includegraphics[width=9 cm]{*}}}
+%\newpage
+%\thispagestyle{empty}
+%\clearpage
+%~~~
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{adadi}
+\input{fa_title}
+\include{preface}
+\tableofcontents
+%\listoffigures
+\clearpage{\pagestyle{empty}\cleardoublepage}
+%برای توضیح این دستور به راهنمای بسته‌ی fancyhdr مراجعه شود
+\mainmatter
+\include{introduction}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\include{chapter1}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\include{chapter2}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\include{chapter3}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\backmatter
+{\small
+{\baselineskip=.75cm
+\include{dicfa2en}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\include{dicen2fa}}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+{\baselineskip=.6cm
+\phantomsection
+\addcontentsline{toc}{chapter}{نمایه}
+\printindex}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\phantomsection
+\addcontentsline{toc}{chapter}{مراجع}
+\bibliographystyle{chicago-fa}
+\bibliography{MyReferences}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+}
+%ایجاد صفحه‌ای سفید%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+\clearpage
+~~~
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{en_title}
+\label{LastPage}
+\end{document}

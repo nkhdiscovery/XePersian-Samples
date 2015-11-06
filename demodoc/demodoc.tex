@@ -1,0 +1,85 @@
+% !TEX TS-program = XeLaTeX 
+% Commands for running this example:
+% xelatex demodoc
+% End of Commands
+\documentclass[a4paper,12pt]{article}
+\pagestyle{empty}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{mathpazo}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[margin=1.5cm,
+    vmargin={1.5cm,1.5cm},
+    nohead]{geometry}
+\usepackage{xepersian}
+\title{سند نمونه}
+\author{نام نویسنده\\
+        در خانه}
+
+
+\begin{document}
+
+\maketitle
+
+\section{مقدمه}
+
+\subsection{متن نمونه}
+اولین قسمت حاوی مقداری متن نمونه است.
+در پرونده ورودی زی‌پرشین، خط‌ها می‌توانند هر جایی که شما دوست دارید شکسته شوند،
+یا حتی می‌توانید فاصله بیشتری قرار دهید تا متن ورودی زی‌پرشین خواناتر باشد،
+اما این تأثیری در خروجی نخواهد گذاشت و اگر یک یا یک‌میلیون فاصله بین کلمات در پرونده ورودی زی‌پرشین قرار دهید،
+ تنها یک فاصله در خوجی ظاهر می‌شود.
+
+برای ایجاد یک پاراگراف جدید، کافی است یک خط خالی بگذارید.
+
+\subsection{مشخص کردن نکات جالب متن}
+
+شما می‌توانید برای تأگید متن، آن را بصورت
+\emph{ایتالیک} 
+یا
+ \textbf{سیاه}
+حروف‌چینی کنید.
+
+\begin{quote}
+همچنین می‌توانید با استفاده از محیط
+\texttt{quote}
+متن خود را با مقداری حاشیه از هر دو طرف راست و چپ، حروف‌چینی کنید.
+\end{quote}
+
+\section{موارد اصلی}
+
+\subsection{ریاضیات}
+
+قوانین خاصی برای حروف‌چینی ریاضی وجود دارد و همچنین تعداد زیادی از دستورات تنها در محیط ریاضی کار می‌کنند.
+یک فرمول ریاضی بین متن مانند
+$x^2+\beta$ 
+دارای فاصله خودکار میان متغیرها و سایر نشانه‌های ریاضی است اما فرمول‌های نمایشی مانند 
+\begin{equation}
+  \vec{A} \times (\vec{B}\times\vec{C}) =
+  (\vec{A}\cdot\vec{C})\vec{B} -
+  (\vec{A}\cdot\vec{B})\vec{C}
+\end{equation}
+\begin{equation}
+  \vec{A}\cdot(\vec{B}\times\vec{C}) =
+  \begin{vmatrix}
+    A_x & A_y & A_y \\
+    B_x & B_y & B_y \\
+    C_x & C_y & C_y
+  \end{vmatrix}
+\end{equation}
+دارای شماره فرمول خودکار هستند.
+
+\subsection{فهرست‌کردن مطالب}
+
+\begin{enumerate}
+\item می‌توانید مطالب را بصورت‌های متفاوتی فهرست کنید، مانند شمارش کردن،
+\item به اقلام نوشتن،
+\item و یا فهرست توصیفی ایجاد کردن.
+\end{enumerate}
+
+\subsection{اضافه‌کردن تصاویر}
+
+تصاویر و نگاره‌سازی‌هایی
+\includegraphics[width=1cm]{demo}
+که با نرم‌افزارهای دیگر تولید شده‌اند، به راحتی قابل درج شدن می‌باشند.
+\end{document}

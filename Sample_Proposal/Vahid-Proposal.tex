@@ -1,0 +1,247 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex Vahid-Proposal
+% 	 xelatex Vahid-Proposal
+% End of Commands
+
+
+
+
+
+%%%  نمونه یک پروپوزال کارشناسی ارشد، دانشگاه تبریز،  وحید دامن ‌افشان،     vdamanafshan@yahoo.com 
+
+
+% توجه داشته باشید برای دیدن خروجی کامل شامل نمایه و فهرست مطالب در ویرایشگر Texmaker، ابتدا دو بار 
+% کلید F1 و بعد کلید F12 و دوباره کلید F1 و در آخر کلید F7 را فشار دهید.
+%توضیحات مربوط به هر بسته یا دستور را می‌توانید در خط بالای آن ببینید.
+
+\documentclass[12pt,a4paper]{article}
+%در ورژن جدید زی‌پرشین برای تایپ متن‌های ریاضی، این سه بسته، حتماً باید فراخوانی شود
+\usepackage{amsthm,amssymb,amsmath}
+%دستوری برای وارد کردن واژه‌نامه انگلیسی به فارسی
+\newcommand\persiangloss[2]{#1\dotfill\lr{#2}\\}
+%بسته‌ای برای تنطیم حاشیه‌های بالا، پایین، چپ و راست صفحه
+%\usepackage[top=50mm, bottom=50mm, left=50mm, right=50mm]{geometry}
+%بسته‌ای برای نمایش تصاویر قرار داده شده در متن
+\usepackage{graphicx}
+% بسته‌ و دستوراتی برای ایجاد لینک‌های رنگی با امکان جهش
+\usepackage[pagebackref=true,colorlinks,linkcolor=blue,citecolor=magenta]{hyperref}
+% چنانچه قصد پرینت گرفتن نوشته خود را دارید، خط بالا را غیرفعال و  از دستور زیر استفاده کنید چون در صورت استفاده از دستور زیر‌‌، 
+% لینک‌ها به رنگ سیاه ظاهر خواهند شد و برای پرینت گرفتن، مناسب‌تر خواهد بود
+%\usepackage[pagebackref=false]{hyperref}
+%بسته‌ای برای ظاهر شدن «مراجع» و «نمایه» در فهرست مطالب
+\usepackage{tocbibind}
+%فراخوانی بسته زی‌پرشین و دستورات مربوط به نوع فونت‌ها
+\usepackage{xepersian}
+\settextfont{XB Niloofar}
+% از revision 118 زی‌پرشین به بعد، وارد کردن دستور زیر لازم نیست. توجه داشته باشید که در صورت  غیرفعال کردن این دستور،
+% از فونت پیش‌فرض لاتک برای کلمات انگلیسی استفاده خواهد شد.
+%\setlatintextfont[ExternalLocation,BoldFont={lmroman10-bold},BoldItalicFont={lmroman10-bolditalic},ItalicFont={lmroman10-italic}]{lmroman10-regular}
+% چنانچه می‌خواهید که اعداد در فرمول‌ها، فارسی باشد، دستور زیر را فعال کنید
+%\setdigitfont{XB Zar}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% تعریف قلم‌های فارسی و انگلیسی برای استفاده در بعضی از قسمت‌های متن
+\defpersianfont\titr[Scale=1]{XB Titre}
+\defpersianfont\nastaliq[Scale=1.5]{IranNastaliq}
+%\defpersianfont\traffic[Scale=1]{B Traffic}
+%\defpersianfont\yekan[Scale=1]{B Yekan}
+%اگر فونت‌های بالا را ندارید، دو خط بالا را غیر فعال و دو خط زیر را فعال کنید
+\defpersianfont\traffic[Scale=1]{XB Roya}
+\defpersianfont\yekan[Scale=1]{XB Kayhan}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% تعریف و نحوه ظاهر شدن قضایا، لم‌ها، تعریف‌ها و ...
+\theoremstyle{definition}
+\newtheorem{definition}{تعریف}[section]
+\theoremstyle{theorem}
+\newtheorem{theorem}[definition]{قضیه}
+\newtheorem{lemma}[definition]{لم}
+\newtheorem{proposition}[definition]{گزاره}
+\newtheorem{corollary}[definition]{نتیجه}
+\newtheorem{remark}[definition]{ملاحظه}
+\theoremstyle{definition}
+\newtheorem{example}[definition]{مثال}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+% دستوری جهت ظاهر نشدن شماره صفحه و سربرگ، در صورت وجود (فقط در صفحه جاری)
+\thispagestyle{empty}
+\vspace*{-28mm}
+% نحوه درج کردن لوگوی دانشگاه
+\centerline{\includegraphics[height=4cm]{logo.jpg}}
+\begin{center}
+%دستوری برای کم کردن فاصله بین لوگو و خط پایین آن
+\vspace{-2mm}
+
+دانشکده علوم ریاضی
+%دستوری برای تعیین فاصله بین دو خط
+\\[.1cm]
+
+گروه ریاضی محض
+\\[.7cm]
+{\large
+پیشنهاد موضوع تحقیقاتی برای پایان‌نامه کارشناسی ارشد
+\\[.2cm]
+ریاضی محض، گرایش آنالیز
+\\[.7cm]
+عنوان
+\\[.4cm]
+}
+{\Huge \yekan
+دامنه‌توانی احتمالی برای فضاهای فشرده 
+\\[.4cm]
+% اگر عنوان پروپوزال شما طولانی است می‌توانید بخشی از آن را در زیر این توضیح وارد کنید. در این صورت فاصله بین دو خط زیادتر     
+% شده و باعث خوانایی و زیبایی عنوان پروپوزال می‌شود. در غیر این صورت، خطوط  ۸۴ تا ۸۸ را پاک کنید.
+پایدار 
+}
+\\[1.3cm]
+{\traffic \large
+استاد راهنما
+}
+\\[.4cm]
+\textbf{\large {\nastaliq دکتر .....}}
+\\[.8cm]
+
+
+{\traffic \large
+استاد مشاور
+}
+\\[.4cm]
+\textbf{\large {\nastaliq دکتر .....}}
+\\[.7cm]
+{\traffic \large
+ پژوهشگر
+}
+\\[.5cm]
+\textbf{\large {\nastaliq وحید دامن‌افشان}}
+\\[.4cm]
+{\large
+شهریور ۱۳۸۸
+}
+\end{center}
+%دستوری برای رفتن به صفحه جدید
+\newpage
+%دستوری برای تعیین فاصله بین خطوط (نه دو خط) و تا وقتی که مقدار آن تغییر نکند، فاصله بین خطوط، همین مقدار است
+\baselineskip=1cm
+%دستوری برای ظاهر شدن فهرست مطالب
+\tableofcontents
+
+\baselineskip=.75cm
+\newpage 
+\section{چکیده }
+این پایان‌نامه که بر مبنای مرجع 
+\cite{alvarez}
+تنظیم می‌شود، به بحث در مورد تناظر یک ‌به ‌یک بین فضاهای فشرده پایدار و فضاهای هاسدورف مرتب فشرده می‌پردازد. این تناظر به کلاس‌های معینی از توابع حقیقی مقدار روی این فضاها توسیع می‌یابد. این کار پایه‌ای برای روش‌های انتقال و نتایجی از آنالیز تابعی به محیط‌های غیر هاسدورف است.
+
+به عنوان کاربردی از این حالت،  قضیه نمایش ریس، برای اثبات سرراست این واقعیت (مشهور) که هر ارزیابی روی یک فضای فشرده پایدار، بطور یکتا به یک اندازه رادون\LTRfootnote{Radon} روی جبر بورل فضای هاسدورف فشرده متناظر توسیع می‌یابد، استفاده می‌شود.
+ 
+ نظریه ارزیابی‌ها و اندازه‌ها، به عنوان تابعی‌های خطی معین روی فضاهای تابع، در نظر گرفتن یک توپولوژی ضعیف برای فضای همه ارزیابی‌ها را پیشنهاد می‌کند. اگر این موارد به حالت‌های احتمالی یا زیراحتمالی محدود شود، آنگاه فضای فشرده پایدار دیگری بدست می‌آید. به فضای مرتب فشرده متناظر، می‌توان به عنوان مجموعه اندازه‌های (احتمالی یا زیراحتمالی) همراه با توپولوژی ضعیف طبیعی آنها نگاه کرد. 
+\section{ بیان مسأله}
+در این پایان‌نامه، دامنه‌های معنایی را به عنوان فضاهای توپولوژیکی در نظر می‌گیریم و کار را با یک توپولوژی طبیعی روی مجموعه ارزیابی‌ها به جلو می‌بریم که در آن احتمال‌های زیادی، برای مثال، توپولوژی اسکات ناشی شده از 
+\lr{dcpo}%
+-ترتیب، وجود دارد. پس از آن، توجه خود را از ارایه ارزیابی‌ها به عنوان تابعی‌های معین روی توابع حقیقی مقدار، برگردانده و یک توپولوژی ضعیف را از دیدگاه آنالیز تابعی، انتخاب می‌کنیم. این کار قطعاً با کارهای قبلی، سازگاری دارد چون همان‌طور که می‌دانیم وقتی که با دامنه‌های پیوسته کار می‌کنیم، توپولوژی ضعیف، همان توپولوژی اسکات\LTRfootnote{Scott} است. 
+
+نکته‌ای که در اینجا باید به آن توجه شود این است که توپولوژی ضعیف را در حالتی در نظر بگیریم که ترتیب-نسبت برای به اندازه کافی محدود کردن توپولوژی اسکات، بسیار پراکنده باشد. علاوه بر این، زمینه نتایج ما، فضاهای فشرده پایدار است. این فضاها، بیشترین دامنه‌های معنایی مانند 
+$\mathrm{FS}  $
+یا
+$ \mathrm{SFP} $
+ را رده‌بندی می‌کنند و بیشترین ارتباط آنها با بحث حاضر این است که در یک تناظر یک به یک با یک منطق برنامه‌ای ساده می‌باشند.
+\section{ بررسی منابع } 
+در معنی شناسی نمادین، برنامه‌ها و قطعه‌برنامه‌ها، به عنصرهایی از ساختارهای ریاضی مانند دامنه‌ها از دیدگاه اسکات، نگاشته می‌شود. اگر سیستم مدل‌بندی شده توانایی ایجاد انتخاب‌های تصادفی (یا انتخاب‌های شبه‌تصادفی) را داشته باشد، آنگاه منطقی است که رفتار خود را به وسیله اندازه‌ای که احتمال را برای سیستم ثبت می‌کند، مدل‌بندی کند تا زیرمجموعه‌ اندازه‌پذیری از مجموعه همه حالت‌های ممکن بشود. این ایده‌ها برای اولین بار توسط صاحب ‌جهرمی\LTRfootnote{Saheb-Djahromi}\cite{saheb} و کازن\LTRfootnote{Kozen}\cite{kozen}
+مطرح شد. هنگامی که کازن با فضاهای اندازه مطلق کار می‌کرد، اندازه‌های (احتمال) در نظر گرفته شده قبلی، به وسیله مجموعه‌های اسکات-باز یک \lr{dcpo}، گسترش پیدا کرد.
+
+از دیدگاه محاسباتی، منطقی است که فقط، زیرمجموعه‌های قابل ‌مشاهده فضای حالت را اندازه بگیریم. این کار در عوض، می‌تواند با زیرمجموعه‌های باز یک توپولوژی طبیعی، مثلاً توپولوژی اسکات روی دامنه‌ها، شناسایی و توضیح داده شود. این ارتباط بین محاسبه‌پذیری و توپولوژی، بطور بسیار روشن، توسط اسمیت\LTRfootnote{Smyth}\cite{smyth1,smyth2}  شرح داده شده و  بعدها توسط آبرامسکی\LTRfootnote{Abramsky}\cite{abramsky1}، ویکرز\LTRfootnote{Vickers}\cite{vickers} و دیگران، بیشتر بسط داده شد.
+
+همچنین تعاریف، مفاهیم و قضایای اولیه را می‌توان در 
+\cite{abramsky2}
+یافت و همان‌طور که قبلاً هم ذکر شد، مبنای کار ما، مرجع 
+\cite{alvarez}
+خواهد بود.
+
+\section{نتایج مورد انتظار}
+
+
+
+در این پایان‌نامه، اثبات دیگری از این واقعیت مهم که همواره ارزیابی‌های پیوسته، به طور یکتا به اندازه‌هایی روی کلاس‌های بزرگی از فضاها، توسیع می‌یابند، در رابطه با فضاهای فشرده پایدار، ارایه می‌‌شود و یک دامنه معنایی از مجموعه ارزیابی‌ها روی یک دامنه ساخته می‌شود و در نهایت انتظار می‌رود که به راحتی بتوانیم  فضاهای فشرده پایدار را با  فضاهای مرتب فشرده، جابجا کنیم. 
+\section{ میزان موفقیت }
+پایان‌نامه حاضر، نکات جالبی نسبت به کارهای قبلی خود دارد که در این زمینه می‌توان به ساختار ساده و خلاصه آن، اشاره کرد. در واقع، در این پایان‌نامه، ارزیابی‌ها و اندازه‌ها به خاطر تأثیر آنها بر روی توابع (پیوسته) با استفاده از انتگرال‌گیری، مورد مطالعه قرار گرفته  و توسیع‌های واقعی با استناد به قضیه نمایش ریس، به دست می‌آید. همچنین با توجه به مطالب موجود در سمینار کارشناسی ارشد، مطالب و منابع موجود در اینترنت، به  احتمال زیاد، پایان‌نامه موفقی خواهد بود.
+\section{ جدول زمان‌بندی مراحل انجام تحقیق }
+\begin{enumerate}
+\item  
+گردآوری و بررسی منابع : ۲ ماه  
+\item  
+تحقیق روی موضوع : ۳ ماه  
+\item  
+تدوین پایان‌نامه و ارایه : ۲ ماه  
+\end{enumerate}
+%نحوه وارد کردن واژه‌نامه انگلیسی به فارسی
+\section{ واژه‌نامه}
+\persiangloss{مجموعه جزئاً مرتب کامل جهت‌دار}{Dcpo}
+\persiangloss{فضای تابع}{Function Space}
+\persiangloss{اندازه }{Measure}
+\persiangloss{مرتب}{Ordered}
+\persiangloss{دامنه‌توانی}{Powerdomain}
+\persiangloss{احتمالی}{Probabilistic}
+\persiangloss{قطعه‌برنامه}{Program Fragment}
+\persiangloss{دامنه معنایی}{Semantic Domain}
+\persiangloss{پایدار}{Stably}
+\persiangloss{ارزیابی}{Valuation}
+\persiangloss{توپولوژی ضعیف}{Weak Topology}
+
+%دستوراتی برای به حالت عادی در آمدن اندازه فونت‌ها و فاصله بین خطوط
+\normalsize
+\small
+%ایجاد «مراجع»
+\setLTRbibitems
+\begin{thebibliography}{99}
+\resetlatinfont
+% چنانچه مرجع فارسی هم دارید باید یا از بسته Persian-bib استفاده کنید و یا راهنمای bidi را ملاحظه فرمایید. 
+
+\bibitem{abramsky1}
+S. Abramsky, {\em Domain theory in logical form}, Ann. Pure Applied Logic 51 (1991) 1–77.
+
+\bibitem{abramsky2}
+S. Abramsky, A. Jung, {\em Domain theory}, in: S. Abramsky, D.M. Gabbay, T.S.E. Maibaum (Eds.), Handbook of
+Logic in Computer Science, Vol. 3, Clarendon Press, Oxford, 1994, pp. 1–68.
+
+\bibitem{alvarez}
+M. Alvarez-Manilla, A. Jung, K. Keimel, {\em The probabilistic powerdomain for stably compact spaces}, Theoretical Computer Science, 328 (2004) 221–244.
+
+\bibitem{kozen}
+D. Kozen, {\em Semantics of probabilistic programs}, J. Comput. System Sci. 22 (1981) 328–350.
+
+\bibitem{saheb}
+N. Saheb-Djahromi, {\em CPO’s of measures for nondeterminism}, Theoret. Comput. Sci. 12 (1980) 19–37.
+
+\bibitem{smyth1}
+M.B. Smyth, {\em Powerdomains and predicate transformers}: a topological view, in: J. Diaz (Ed.), Automata,
+Languages andProgramming, Lecture Notes in Computer Science, Vol. 154, Springer, Berlin, 1983,
+pp. 662–675.
+
+\bibitem{smyth2}
+M.B. Smyth, Topology, S. Abramsky, D.M. Gabbay, T.S.E. Maibaum (Eds.), {\em Handbook of Logic in
+Computer Science}, Vol. 1, Clarendon Press, Oxford, 1992, pp. 641–761.
+
+\bibitem{vickers}
+S.J. Vickers, {\em Topology Via Logic}, Cambridge Tracts in Theoretical Computer Science, Vol. 5, Cambridge
+University Press, Cambridge, 1989.
+
+\end{thebibliography}
+
+\end{document} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

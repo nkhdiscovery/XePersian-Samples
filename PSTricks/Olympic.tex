@@ -1,0 +1,59 @@
+% !TEX TS-program = XeLaTeX
+% Commands for running this example:
+% 	 xelatex Olympic
+% End of Commands
+% This file draws the Olympic rings using PSTricks.
+% File name: rings.tex
+% Compile:
+%  $ latex rings
+%  $ dvips rings -E -o rings.eps
+%  $ eps2png -width 600 rings.eps
+
+\documentclass{article}
+\usepackage[dvipsnames]{pstricks}
+
+\usepackage{xepersian}
+
+\pagestyle{empty}
+
+\definecolor{myblue}{rgb}{0,.52,.78}
+\definecolor{myyellow}{rgb}{.96,.76,0}
+\definecolor{mygreen}{rgb}{0,.62,.24}
+\definecolor{myred}{rgb}{.87,0,.14}
+
+\newcommand{\drawring}[1]{%
+\pscircle[linewidth=.25,linecolor=#1](0,0){1.375}%
+\pscircle[linewidth=.05,linecolor=white](0,0){1.425}%
+\pscircle[linewidth=.05,linecolor=white](0,0){1.125}%
+}
+
+\newcommand{\drawarc}[3]{%
+\psarc[linewidth=.25,linecolor=#1](0,0){1.25}{#2}{#3}%
+\psarc[linewidth=.05,linecolor=white](0,0){1.4}{#2}{#3}%
+\psarc[linewidth=.05,linecolor=white](0,0){1.1}{#2}{#3}%
+}
+
+\begin{document}
+
+المپیک 
+
+\color{white}
+\fboxsep=0pt
+\fbox{
+
+\begin{pspicture}(-4.5,-3)(4.5,1.5)
+%\psgrid
+\rput(-3,0){\drawring{myblue}}
+\rput(-1.5,-1.375){\drawring{myyellow}}
+\rput(-3,0){\drawarc{myblue}{330}{30}}
+\rput(0,0){\drawring{black}}
+\rput(-1.5,-1.375){\drawarc{myyellow}{30}{90}}
+\rput(1.5,-1.375){\drawring{mygreen}}
+\rput(0,0){\drawarc{black}{330}{30}}
+\rput(3,0){\drawring{myred}}
+\rput(1.5,-1.375){\drawarc{mygreen}{30}{90}}
+
+\end{pspicture}
+
+}
+\end{document}

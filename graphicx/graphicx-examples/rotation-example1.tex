@@ -1,0 +1,20 @@
+% !TEX TS-program = XeLaTeX 
+% Commands for running this example:
+% xelatex rotation-example1
+% End of Commands
+\documentclass{article}
+\pagestyle{empty}
+\newcommand\HR{\rule{1em}{0.4pt}}
+\newcommand\bluefbox[1]{\textcolor{blue}{\setlength\fboxsep{0pt}%
+                                      \fbox{\textcolor{black}{#1}}}}
+
+\usepackage{color,graphicx} 
+\usepackage{xepersian}
+\begin{document}
+\HR\bluefbox{\rotatebox{45}{%
+   \fbox{\parbox{3em}{قرمز\\سبز\\آبی}}}}%
+\HR\bluefbox{\rotatebox{45}{%
+   \fbox{\parbox[t]{3em}{قرمز\\سبز\\آبی}}}}%
+\HR\bluefbox{\rotatebox{45}{%
+   \fbox{\parbox[b]{3em}{قرمز\\سبز\\آبی}}}}\HR
+\end{document}
